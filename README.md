@@ -4,6 +4,8 @@ Our product is a website that displays information on the team and its events. T
 
 https://capstone-scienceclubwebsite.onrender.com
 
+PGPASSWORD=KZZ2cBRmRbHaU5oqHn31uphoQx7JJUHO psql -h dpg-cdptrq9a6gdl61ghmvm0-a.ohio-postgres.render.com -U scienceclubdb_user scienceclubdb
+
 #Installation
 
 clone repo
