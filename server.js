@@ -56,6 +56,15 @@ app
     try {
       const client = await pool.connect();
 
+      //SQL Variables
+      const testSQL = `SELECT id FROM test;`;
+      const testCount = await client.query(testSQL);
+
+      // Server variables that need to be passed to the local js files.
+      const args = {
+        testCount: testCount ? testCount.rowCount : null,
+      };
+
       res.render('pages/feedback', args);
     } catch (err) {
       console.error(err);
