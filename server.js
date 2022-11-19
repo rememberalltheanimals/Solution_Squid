@@ -52,7 +52,7 @@ app
       });
     }
   })
-  .get('/', async(req, res) => {
+  .get('/feedback', async(req, res) => {
     try {
       const client = await pool.connect();
 
