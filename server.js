@@ -57,7 +57,7 @@ app
       const client = await pool.connect();
 
       //SQL Variables
-      const testSQL = `SELECT id FROM test;`;
+      const testSQL = `SELECT id FROM feedback;`;
       const testCount = await client.query(testSQL);
 
       // Server variables that need to be passed to the local js files.
