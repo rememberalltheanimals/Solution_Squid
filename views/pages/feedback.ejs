@@ -8,6 +8,11 @@
 </head>
 <body>
   <a id="feedback" href="/feedback">Feedback</a>
+  <% testCount.forEach(function(b) { %>
+    <button id="<%= b.id %>" onclick="javascript:send(<%= b.id %>);">
+      <%= b.advice %>
+    </button>
+<% }); %>
   <p>Testing count: <%= testCount %> </p>
   <button id="test" onclick="javascript:send(this.id);">Test</button>
   <p id="output"></p>
