@@ -52,6 +52,21 @@ app
       });
     }
   })
+  .get('/', async(req, res) => {
+    try {
+      const client = await pool.connect();
+
+      res.render('pages/feedback', args);
+    } catch (err) {
+      console.error(err);
+      res.set({
+        'Content-Type': 'application/json',
+      });
+      res.json({
+        error: err,
+      });
+    }
+  })
   .post('/log', async (req, res) => {
     res.set({
       'Content-Type': 'application/json',
