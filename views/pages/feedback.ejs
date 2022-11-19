@@ -8,7 +8,12 @@
 </head>
 <body>
   <a id="feedback" href="/feedback">Feedback</a>
-  <p>Testing count: <%= testCount.advice %> </p>
+  <% buttons.forEach(function(b) { %>
+    <p id="<%= b.id %>Counter">
+      <%= b.id %> counter : <%= b.id %>
+    </p> 
+  <% }); %>
+  <p>Testing count: <%= testCount %> </p>
   <button id="test" onclick="javascript:send(this.id);">Test</button>
   <p id="output"></p>
 
@@ -30,7 +35,7 @@ const send = async function (buttonId) {
   });
   const result = await response.json();
   if (result.error) {
-    output.innerHTML = "test" `<strong>ERROR: ${result.error.routine}</strong>`;
+    output.innerHTML = `<strong>ERROR: ${result.error.routine}</strong>`;
   } else {
     output.innerHTML = `<p>passed.</p>`;
   }
