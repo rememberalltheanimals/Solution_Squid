@@ -57,12 +57,12 @@ app
       const client = await pool.connect();
 
       //SQL Variables
-      const testSQL = `SELECT * FROM feedback ORDER BY id ASC;`;
-      const testCount = await client.query(testSQL);
+      const feedbackSQL = `SELECT advice FROM feedback ORDER BY id ASC;`;
+      const feedbackCount = await client.query(feedbackSQL);
 
       // Server variables that need to be passed to the local js files.
       const args = {
-        testCount: testCount ? testCount.rowCount : null,
+        "feedbackCount": feedbackCount ? feedbackCount.rows : null,
       };
 
       res.render('pages/feedback', args);
@@ -88,6 +88,33 @@ app
         VALUES ($1);`;
 
       const insert = await client.query(insertSql, [id]);
+
+      const response = {
+        newId: insert ? insert.rows[0] : null,
+      };
+
+      res.json(response);
+
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.json({
+        error: err,
+      });
+    }
+  })
+  .post('/feedlog', async (req, res) => {
+    res.set({
+      'Content-Type': 'application/json',
+    });
+    try {
+      const client = await pool.connect();
+      const id = req.body.id;
+      const values = "test";
+      const insertfeedSql = `INSERT INTO feedback (advice)
+        VALUES ($1);`;
+
+      const insert = await client.query(insertfeedSql, [id]);
 
       const response = {
         newId: insert ? insert.rows[0] : null,
