@@ -205,42 +205,6 @@ p {
   background-color: #D085B8; /* Background on hover */
 }
 
-/*Dropdown menu for trip*/
-#tripDIV {
-  background-color: #520037;
-  font-family: Tahoma, Verdana, Segoe, sans-serif; 
-  font-size: 16px; 
-  font-style: normal; 
-  font-variant: normal; 
-  font-weight: 700; 
-  line-height: 24px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding: 5px;
-}
-
-#showTripButton {
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #520037; /* Set a background color */
-  color: #FFF; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  font-size: 18px; /* Increase font size */
-  width: 100%;
-}
-
-#showTripButton:hover {
-  background-color: #D085B8; /* Background on hover */
-}
-
-#tripDIV {
-  display: none;
-  background-color: #FFC8A3;
-}
-
 /*Desktop Display*/
 @media screen and (min-width: 1000px) {
   /* comes into effect for screens greater than 1000 pixels */
