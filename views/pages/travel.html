@@ -1,0 +1,210 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Information</title>
+    <style>
+        /* Popup container - can be anything you want */
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* The actual popup */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #000 transparent transparent transparent;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+
+    span p {
+        text-align: left;
+        margin-left: 2px;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MHS SY Team</h1>
+    </header>
+
+    <h2>
+        Click on an event for travel information:
+    </h2>
+
+    <p>
+        Completed Events: <br>
+        <ol>
+            <button class="popup" onclick="showEvent1()">Belleville, WI (11-12-2022)
+                <span class="popuptext" id="popupEvent1">
+                    <p>
+                        Yellow School Bus<br>
+                        Departs: 3am<br>
+                        Returns: 10pm<br>
+                        Both at MHS Main Doors<br>
+                        <b>Caution:</b> Redeye Bus Journey<br>
+                        Hotel Stay: None<br>
+                        <b>Be aware that above info is subject to change</b><br>
+                    </p>
+                </span>
+            </button><br>
+        </ol>
+
+        Upcoming Events: <br>
+        <ol>
+            <button class="popup" onclick="showEvent2()">Boyceville Invite (12-03-2022)
+                <span class="popuptext" id="popupEvent2">
+                    <p>
+                        Yellow School Bus<br>
+                        Departs: TBD<br>
+                        Returns: TBD<br>
+                        Both at MHS Main Doors<br>
+                        Hotel Stay: None<br>
+                        <b>Be aware that above info is subject to change</b><br>
+                    </p>
+                </span>
+            </button><br>
+            
+            <button class="popup" onclick="showEvent3()">Marquette Invite (01-07-2023)
+                <span class="popuptext" id="popupEvent3">
+                    <p>
+                        TBD Bus<br>
+                        Departs: TBD<br>
+                        Returns: TBD<br>
+                        Both at MHS Main Doors<br>
+                        <b>Caution:</b> Overnight Stay<br>
+                        Hotel Stay: Yes<br>
+                        Hotel Name: TBD<br>
+                        Hotel Address: TBD<br>
+                        <b>Be aware that above info is subject to change</b><br>
+                    </p>
+                </span>
+            </button><br>
+            
+            <button class="popup" onclick="showEvent4()">Medford Invite (01-14-2023)
+                <span class="popuptext" id="popupEvent4">
+                    <p>
+                        Yellow School Bus<br>
+                        Departs: TBD<br>
+                        Returns: TBD<br>
+                        Both at MHS Main Doors<br>
+                        <b>Caution:</b> Early Bus Journey<br>
+                        Hotel Stay: None<br>
+                        <b>Be aware that above info is subject to change</b><br>
+                    </p>
+                </span>
+            </button><br>
+            
+            <button class="popup" onclick="showEvent5()">UW - River Falls  (01-21-2023)
+                <span class="popuptext" id="popupEvent5">
+                    <p>
+                        Yellow School Bus<br>
+                        Departs: TBD<br>
+                        Returns: TBD<br>
+                        Both at MHS Main Doors<br>
+                        Hotel Stay: None<br>
+                        <b>Be aware that above info is subject to change</b><br>
+                    </p>
+                </span>
+            </button><br>
+            
+            <button class="popup" onclick="showEvent6()">Menomonie Regional (03-04-2023)
+                <span class="popuptext" id="popupEvent6">
+                    <p>
+                        The event is hosted at Menomonie High School, so no travel is required.<br>
+                        <b>Be aware that above info is subject to change</b><br>
+                    </p>
+                </span>
+            </button><br>
+            
+            <button class="popup" onclick="showEvent7()">State Tournament (04-01-2023)
+                <span class="popuptext" id="popupEvent7">
+                    <p>
+                        TBD Bus<br>
+                        Departs: TBD<br>
+                        Returns: TBD<br>
+                        Both at MHS Main Doors<br>
+                        <b>Caution:</b> Redeye Bus Journey<br>
+                        Hotel Stay: Yes<br>
+                        Hotel Name: TBD<br>
+                        Hotel Address: TBD<br>
+                        <b>Be aware that above info is subject to change</b><br>
+                    </p>
+                </span>
+            </button><br>
+        </ol>
+
+        Last Updated: November 20, 2022
+    </p>
+
+    <footer>
+        MHS Science Olympiad Team
+    </footer>
+
+    <script>
+        function showEvent1() {
+            var popup = document.getElementById("popupEvent1");
+            popup.classList.toggle("show");
+        }
+        function showEvent2() {
+            var popup = document.getElementById("popupEvent2");
+            popup.classList.toggle("show");
+        }
+        function showEvent3() {
+            var popup = document.getElementById("popupEvent3");
+            popup.classList.toggle("show");
+        }
+        function showEvent4() {
+            var popup = document.getElementById("popupEvent4");
+            popup.classList.toggle("show");
+        }
+        function showEvent5() {
+            var popup = document.getElementById("popupEvent5");
+            popup.classList.toggle("show");
+        }
+        function showEvent6() {
+            var popup = document.getElementById("popupEvent6");
+            popup.classList.toggle("show");
+        }
+        function showEvent7() {
+            var popup = document.getElementById("popupEvent7");
+            popup.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
