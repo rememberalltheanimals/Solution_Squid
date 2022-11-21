@@ -9,10 +9,14 @@
 <body>
   <p>Testing count: <%= testCount %> </p>
   <button id="test" onclick="javascript:send(this.id);">Test</button>
+  <button onclick="navigate('emailSignup')"></button>
   <p id="output"></p>
 
   <script src="/socket.io/socket.io.js"></script>
   <script>
+    function navigate(location){
+       document.location.href = location;
+    }
     const socket = io();
 const testButton = document.getElementById('test');
 const output = document.getElementById('output');
