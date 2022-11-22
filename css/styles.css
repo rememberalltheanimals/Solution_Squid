@@ -21,6 +21,9 @@
 .color-secondary-2-3 { color: #520037 }
 .color-secondary-2-4 { color: #3B0028 }
 
+.white { color: #ffffff }
+.gold {color: #FFD700 }
+
 body {
   background-color: #4A0009;
   color: #fff;
