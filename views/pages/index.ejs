@@ -8,10 +8,14 @@
   <link rel="stylesheet" href="../../css/styles.css"> 
 </head>
 <body>
-  <a id="feedback" href="/feedback">Feedback</a>
+  <a id="feedback" href="#" onclick="navigate('feedback')">Feedback</a>
+  <a id="emailSignup" href="#" onclick="navigate('emailSignup')">Email Signup</a>
+  <a href="upcoming.html">Upcoming Events</a>
+  <a href="travel.html">Travel Information</a>
+  <a href="../../fundraise.ejs">Fundraiser</a>
+  <a href="../../home.ejs">Homepage</a>
   <p>Testing count: <%= testCount %> </p>
   <button id="test" onclick="javascript:send(this.id);">Test</button>
-  <button onclick="navigate('emailSignup')"></button>
   <p id="output"></p>
 
   <script src="/socket.io/socket.io.js"></script>
