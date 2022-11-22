@@ -25,12 +25,12 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
     const socket = io();
-const testButton = document.getElementById('11');
-const output = document.getElementById('output');
-const send = async function (buttonId) {
-  const response = await fetch(`/feedlog`, {
-    method: 'POST',
-    headers: {
+    const testButton = document.getElementById('11');
+    const output = document.getElementById('output');
+    const send = async function (buttonId) {
+    const response = await fetch(`/feedlog`, {
+      method: 'POST',
+      headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
