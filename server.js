@@ -121,6 +121,9 @@ app
   });
 
 app
+  .get('/emailSignup', function (req, res) {
+    res.render('pages/emailSignup');
+  })
   .post('/emailSignup', async (req, res) => {
     res.set({
       'Content-Type': 'application/json',

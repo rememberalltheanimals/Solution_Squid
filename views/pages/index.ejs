@@ -7,10 +7,10 @@
   <title>Capstone project</title>
 </head>
 <body>
-  <a id="feedback" href="/feedback">Feedback</a>
+  <a id="feedback" href="#" onclick="navigate('feedback')">Feedback</a>
+  <a id="emailSignup" href="#" onclick="navigate('emailSignup')">Email Signup</a>
   <p>Testing count: <%= testCount %> </p>
   <button id="test" onclick="javascript:send(this.id);">Test</button>
-  <button onclick="navigate('emailSignup')"></button>
   <p id="output"></p>
 
   <script src="/socket.io/socket.io.js"></script>
