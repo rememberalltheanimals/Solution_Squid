@@ -1,0 +1,273 @@
+/*css/styles
+*/
+
+/*for VS only, just to see how they render.*/
+
+.color-primary-0 { color: #41040B }	/* Main Primary color */
+.color-primary-1 { color: #F79EA8 }
+.color-primary-2 { color: #F79EA8 }
+.color-primary-3 { color: #66000C }
+.color-primary-4 { color: #4A0009 }
+
+.color-secondary-1-0 { color: #441E04 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #FFC8A3 }
+.color-secondary-1-2 { color: #B46C3C }
+.color-secondary-1-3 { color: #6B2B00 }
+.color-secondary-1-4 { color: #4D1F00 }
+
+.color-secondary-2-0 { color: #340324 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #D085B8 }
+.color-secondary-2-2 { color: #988D00 }
+.color-secondary-2-3 { color: #520037 }
+.color-secondary-2-4 { color: #3B0028 }
+
+.white { color: #ffffff }
+.gold {color: #FFD700 }
+
+body {
+  background-color: #4A0009;
+  color: #fff;
+}
+
+header {
+  background-color: #41040B;
+  border-bottom: 2px solid #D085B8;
+}
+
+header h1 {
+  max-width: 300px;
+  /*ONLY WHEN THERE IS A LOGO text-indent: -9999; */
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 { 
+  font-family: Tahoma, Verdana, Segoe, sans-serif; 
+  font-size: 34px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 700; 
+  line-height: 34px;
+  color: #988D00;
+}
+
+nav {
+  display: none;
+  float: none;
+  background-color: #441E04;
+  width: auto;
+  padding: 0;
+}
+
+nav ul {
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  width: 100px;
+  font-size: 110%;
+  text-align: center;
+  background-color: #F79EA8;
+  border: 3px solid #D085B8; 
+  margin: 1%;
+  padding: 15px;
+}
+
+nav a {
+  color: #FFF;
+  font-family: Tahoma, Verdana, Segoe, sans-serif; 
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #340324;
+}
+
+p a {
+  color: #FFF;
+  text-decoration: underline; 
+}
+
+ol { 
+  font-family: Tahoma, Verdana, Segoe, sans-serif; 
+  font-size: 16px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 400; 
+  line-height: 20px;
+}
+
+main {
+  background-color: #41040B;
+  margin: 0 auto;
+  padding: 1%;
+  width: 98%;
+}
+
+main a {
+  color: #FFF;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+main a:hover {
+  color: #D085B8;
+}
+
+main a:visited {
+  color: #D085B8;
+}
+
+img {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+h2 { 
+  font-family: Tahoma, Verdana, Segoe, sans-serif; 
+  font-size: 30px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 700; 
+  line-height: 30px;
+}
+
+h3 {
+  color: #340324;
+  background-color: #FFD700;
+  font-family: Tahoma, Verdana, Segoe, sans-serif; 
+  font-size: 20px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 700; 
+  line-height: 24px;
+}
+
+h4 {
+  color: #340324;
+  font-family: Tahoma, Verdana, Segoe, sans-serif; 
+  font-size: 24px; 
+  font-style: normal; 
+  font-variant: normal; 
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: -16px;
+}
+
+p { 
+  font-family: Tahoma, Verdana, Segoe, sans-serif; 
+  font-size: 16px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 400; 
+  line-height: 20px;
+}
+
+#navBtn {
+  display: block;
+  position: fixed; /* Fixed/sticky position */
+  top: 30px; /* Place the button at the top of the page */
+  right: 10px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #520037; /* Set a background color */
+  color: #FFF; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#navBtn:hover {
+  background-color: #D085B8; /* Background on hover */
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #520037; /* Set a background color */
+  color: #FFF; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #D085B8; /* Background on hover */
+}
+
+/*Desktop Display*/
+@media screen and (min-width: 1000px) {
+  /* comes into effect for screens greater than 1000 pixels */
+  header {
+    display: flex;
+    padding: 0;
+  }
+  header h1 {
+    max-width: 500px;
+    font-size: 48px;
+  }
+  header h1 a {
+    font-size: 48px;
+  }
+  nav {
+    align-content: right;
+    display: block;
+    padding-right: 0;
+    min-width: 1100px;
+  }
+  nav li {
+    display: inline-block;
+    width: 100px;
+    font-size: 110%;
+    text-align: center;
+    background-color: #F79EA8;
+    border: 3px solid #D085B8;
+    margin: 1%;
+    padding: 10px;
+  }
+  #navBtn {
+    display: none;
+  }
+
+}
+
+/*Tablet Display */
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  /* comes into effect for screens between 600 and 1000 pixels */
+
+  header h1 a {
+    font-size: 40px;
+  }
+  nav {
+    align-content: right;
+    display: block;
+    margin: 0;
+  }
+  nav li {
+    display: inline-block;
+    width: 100px;
+    font-size: 110%;
+    text-align: center;
+    background-color: #F79EA8;
+    border: 3px solid #D085B8;
+    margin: 1%;
+    padding: 10px;
+  }
+  #navBtn {
+    display: none;
+  }
+
+}
