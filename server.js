@@ -59,7 +59,18 @@ app.post('/log', async (req, res) => {
 app.get('/emailSuccess', function (req, res) {
   res.render('pages/emailSuccess');
 });
-
+app.get('/fundraise', function (req, res) {
+  res.render('pages/fundraise');
+});
+app.get('/home', function (req, res) {
+  res.render('pages/home');
+});
+app.get('/travel', function (req, res) {
+  res.render('pages/travel');
+});
+app.get('/upcoming', function (req, res) {
+  res.render('pages/upcoming');
+});
 app
   .get('/', async (req, res) => {
     try {

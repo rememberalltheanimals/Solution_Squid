@@ -5,20 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capstone project</title>
-  <link rel="stylesheet" href="../../css/styles.css"> 
+  <link rel="stylesheet" href="/public/assets/styles.css"> 
 </head>
 <body>
-  <a id="feedback" href="#" onclick="navigate('feedback')">Feedback</a>
-  <a id="emailSignup" href="#" onclick="navigate('emailSignup')">Email Signup</a>
+  <a id="feedback" href="feedback">Feedback</a>
+  <a id="emailSignup" href="emailSignup">Email Signup</a>
   <p>Testing count: <%= testCount %> </p>
   <button id="test" onclick="javascript:send(this.id);">Test</button>
   <p id="output"></p>
 
   <script src="/socket.io/socket.io.js"></script>
   <script>
-    function navigate(location){
-       document.location.href = location;
-    }
     const socket = io();
 const testButton = document.getElementById('test');
 const output = document.getElementById('output');
