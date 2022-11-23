@@ -87,7 +87,7 @@ app
 
       //Passes page to browser to display "pages/index".
       //Passes server variables to js file "args".
-      res.render('pages/index', args);
+      res.render('pages/home', args);
     } catch (err) {
       console.error(err);
       res.set({
