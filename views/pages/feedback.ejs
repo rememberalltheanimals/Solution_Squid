@@ -10,10 +10,7 @@
 <body>
   <header><%- include('header.ejs') %></header>
   <h1>MHS Science Olympiad - Advice Page</h1>
-  <a id="feedback" href="/">Home</a></br>
-  <textarea id="textarea" rows="5" cols="60" name="description" maxlength="100">
-    Enter details here...
-  </textarea>
+  <textarea id="textarea" placeholder="Enter details here..."  rows="5" cols="60" name="description" maxlength="100"></textarea>
   <button id="11" onclick="javascript:send(document.getElementById('textarea').value);">Submit</button>
   <div id="container">
     <% feedbackCount.forEach(function(b) { %>
@@ -29,11 +26,14 @@
     const testButton = document.getElementById('11');
     const output = document.getElementById('output');
     const send = async function (buttonId) {
-    const response = await fetch(`/feedlog`, {
-      method: 'POST',
-      headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
+      
+      document.getElementById('textarea').value = ""
+      
+      const response = await fetch(`/feedlog`, {
+        method: 'POST',
+        headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       id: buttonId,
