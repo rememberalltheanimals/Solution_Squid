@@ -26,25 +26,36 @@
 </body>
 <script>
 const subButton = document.getElementById('submit');
-const output = document.getElementById('output');
+const output = document.getElementById('output');  
+
 const send = async function (email, name) {
-  const response = await fetch(`/emailSignup`, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      userEmail: email,
-      userName: name,
-    }),
-  });
-  const result = await response.json();
-  if (result.error) {
-    output.innerHTML = `<strong>ERROR: ${result.error.routine}</strong>`;
+  const validateEmail = (email) => {
+    return email.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+  };
+  if(validateEmail(email)){
+
+    const response = await fetch(`/emailSignup`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        userEmail: email,
+        userName: name,
+      }),
+    });
+    const result = await response.json();
+    if (result.error) {
+      output.innerHTML = `<strong>ERROR: ${result.error.routine}</strong>`;
+    } else {
+      document.location.href = "emailSuccess";
+    }
   } else {
-    document.location.href = "emailSuccess";
+    alert('Please enter a valid email.')
   }
-};
+  };
 </script>
 </html>
