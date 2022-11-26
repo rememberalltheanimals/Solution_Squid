@@ -1,0 +1,221 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <link rel="stylesheet" href="../../../public/assets/styles.css">
+    <!-- Adding Additional Quiz Styles Here -->
+    <style>
+        .quiz {
+            border: 5px outset #F79DA8;
+            background-color: #3B0028;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        a {
+            color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Remote Sensing Practice Quiz</h2>
+
+    <div class="quiz" id="quiz"></div>
+    <button class= "quiz" id="submit">Submit Quiz</button>
+    <div id="results"></div>
+
+    <h3><a href="../quizzes.html">Back</a></h3>
+
+    <p>Disclaimer: this quiz is not intended to be a replacement for practice. These are a sample of questions that may be found in the event.</p>
+
+    <script>
+        //declare variables
+        const quizContainer = document.getElementById('quiz');
+        const resultsContainer = document.getElementById('results');
+        const submitButton = document.getElementById('submit');
+
+        const testQuestions = [ //list of questions
+            {
+                question: "1. What is the name of the first satellite?",
+                answers: {
+                    a: "Explorer 1",
+                    b: "Sputnik 1",
+                    c: "GOES"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "2. What is the name of the US’ first satellite?",
+                answers: {
+                    a: "Explorer 1",
+                    b: "Sputnik 1",
+                    c: "GOES"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "3. Which satellite took the first photograph of earth from space?",
+                answers: {
+                    a: "Explorer 5",
+                    b: "Explorer 6",
+                    c: "Explorer 4"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "4. What is an ASTER?",
+                answers: {
+                    a: "Advanced Spaceborne Thermal Emission and Reflection Radiograph",
+                    b: "Advanced Spacecraft Thermal Emission and Rarefaction Radiograph",
+                    c: "Advanced Spaceborne Thermal Emission and Reflection Radiometer"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "5. What is a RAR?",
+                answers: {
+                    a: "Real Aperture Radar",
+                    b: "The sound of a ROAR!",
+                    c: "Real Analog Radar"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "6. What is a MODIS?",
+                answers: {
+                    a: "Moderate-resolution Imaging Spectrometer",
+                    b: "Mild-resolution Imaging Spectroradiometer",
+                    c: "Moderate-resolution Imaging Spectroradiometer"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "7. What is an ALI?",
+                answers: {
+                    a: "Advanced Land Induction",
+                    b: "Advanced Land Imager",
+                    c: "Approaching Land Images"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "8. What types of waves are used in modern-day radars?",
+                answers: {
+                    a: "Radio Waves",
+                    b: "X-Rays",
+                    c: "Microwaves"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "9. Which of the following radiometers measures the intensity of radiation in multiple wavelength bands?",
+                answers: {
+                    a: "spectroradiometer",
+                    b: "spectrometer",
+                    c: "radiometer"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "10. What is the best definition for blackbody.",
+                answers: {
+                    a: "A hypothetical ideal radiator that absorbs and re-emits all incident energy.",
+                    b: "A hypothetical ideal radiator that absorbs and re-emits no incident energy.",
+                    c: "A hypothetical ideal radiator that reflects and re-emits all incident energy."
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "11. If an image has high backscatter, what does it say about the landscape being imaged?",
+                answers: {
+                    a: "Soft surface",
+                    b: "Rough surface",
+                    c: "Smooth surface"
+                },
+                correctAnswer: "b"
+            }
+            ];
+
+        function buildQuiz(){ //function to build a quiz
+            //variable to store the HTML output
+            const output = [];
+
+            //for each question...
+            testQuestions.forEach(
+                (currentQuestion, questionNumber) => {
+
+                    //variable to store the list of possible answers
+                    const answers = [];
+
+                    //and for each available answer...
+                    for(letter in currentQuestion.answers){
+
+                    //...add an HTML radio button
+                    answers.push(
+                        `<label>
+                        <input type="radio" name="question${questionNumber}" value="${letter}">
+                        ${letter})
+                        ${currentQuestion.answers[letter]}
+                        </label><br>`
+                    );
+                    }
+
+                    //add this question and its answers to the output
+                    output.push(
+                    `<div class="question"> ${currentQuestion.question} </div>
+                    <div class="answers"> ${answers.join('')} </div><br>`
+                    );
+                }
+            );
+
+            //combine output list into one string of HTML and add to page
+            quizContainer.innerHTML = output.join('');
+        }
+
+        function showResults(){ //function to show the results of the quiz
+            //get answer containers from our quiz
+            const answerContainers = quizContainer.querySelectorAll('.answers');
+
+            //keep track of user's answers
+            let numCorrect = 0;
+
+            //for each question...
+            testQuestions.forEach( (currentQuestion, questionNumber) => {
+
+            //find selected answer
+            const answerContainer = answerContainers[questionNumber];
+            const selector = `input[name=question${questionNumber}]:checked`;
+            const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+            //if answer is correct
+            if(userAnswer === currentQuestion.correctAnswer){
+                //add to the number of correct answers
+                numCorrect++;
+
+                //highlight the answers green
+                answerContainers[questionNumber].style.backgroundColor  = 'green';
+            }
+            //if answer is wrong or blank
+            else{
+                //highlight the answers red
+                answerContainers[questionNumber].style.backgroundColor  = 'red';
+            }
+            }); //count of correct answers will still work. 
+
+            //show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${testQuestions.length}`;
+        }
+
+        //immediately display quiz
+        buildQuiz();
+
+        //show results when submitted
+        submitButton.addEventListener('click', showResults);
+
+    </script>
+</body>
+</html>
