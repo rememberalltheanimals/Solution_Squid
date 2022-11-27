@@ -59,6 +59,30 @@ app.post('/log', async (req, res) => {
 app.get('/emailSuccess', function (req, res) {
   res.render('pages/emailSuccess');
 });
+app.get('/discussion', async (req, res) => {
+  try {
+    const client = await pool.connect();
+
+    //SQL Variables
+    const feedbackSQL = `SELECT post FROM discussion ORDER BY id ASC;`;
+    const feedbackCount = await client.query(feedbackSQL);
+
+    // Server variables that need to be passed to the local js files.
+    const args = {
+      feedbackCount: feedbackCount ? feedbackCount.rows : null,
+    };
+
+    res.render('pages/discussion', args);
+  } catch (err) {
+    console.error(err);
+    res.set({
+      'Content-Type': 'application/json',
+    });
+    res.json({
+      error: err,
+    });
+  }
+})
 app.get('/fundraise', function (req, res) {
   res.render('pages/fundraise');
 });
@@ -152,6 +176,33 @@ app
       };
 
       res.json(response);
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.json({
+        error: err,
+      });
+    }
+  })
+  .post('/discussion', async (req, res) => {
+    res.set({
+      'Content-Type': 'application/json',
+    });
+    try {
+      const client = await pool.connect();
+      const id = req.body.id;
+      const values = 'test';
+      const insertfeedSql = `INSERT INTO discussion (post)
+        VALUES ($1);`;
+
+      const insert = await client.query(insertfeedSql, [id]);
+
+      const response = {
+        newId: insert ? insert.rows[0] : null,
+      };
+
+      res.json(response);
+
       client.release();
     } catch (err) {
       console.error(err);
