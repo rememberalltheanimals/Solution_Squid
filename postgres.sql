@@ -17,3 +17,10 @@ userNames TEXT NOT NULL
 );
 
 INSERT INTO userEmails (userEmails, userNames) VALUES ('test@email.com', 'john doe');
+
+CREATE TABLE discussion (
+  id SERIAL PRIMARY key,
+  post varchar(100)
+);
+
+INSERT INTO discussion (post) VALUES ('This is the original post');
