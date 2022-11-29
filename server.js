@@ -123,6 +123,7 @@ app.get('/discussion', async (req, res) => {
     // Server variables that need to be passed to the local js files.
     const args = {
       feedbackCount: feedbackCount ? feedbackCount.rows : null,
+      user: checkUser(req),
     };
 
     res.render('pages/discussion', args);
