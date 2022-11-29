@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/styles.css"> 
+  <title>Login</title>
+</head>
+<body>
+  <header><%- include('header.ejs') %></header>
+  <h1>Login</h1>
+  <% if (messages.registered) { %>
+    <h3><%=messages.registered%></h3>
+  <% } %> 
+    <% if (messages.error) { %>
+    <h3><%=messages.error%></h3>
+  <% } %> 
+  <div id="container">
+    <form action="/login" method="post">
+      <ul>
+        <li>
+          <label for="email">Email: </label>
+          <input type="email" id="email" name="email" required>
+        </li>
+        <li>
+          <label for="password">Password: </label>
+          <input type="password" id="password" name="password" required>
+        </li>
+        <li>
+          <button type="submit">Login</button>
+        </li>
+      </ul>
+    </form>
+    <a href="/registration">Create an account</a>
+  </div>
+</body>
+</html>

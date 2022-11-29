@@ -10,13 +10,15 @@ CREATE TABLE feedback (
   advice varchar(100)
 );
 
-CREATE TABLE userEmails(
+CREATE TABLE users(
 id SERIAL PRIMARY KEY,
 userEmails TEXT NOT NULL,
-userNames TEXT NOT NULL
+userfNames TEXT NOT NULL,
+userlNames TEXT NOT NULL,
+userPwords TEXT NOT NULL
 );
 
-INSERT INTO userEmails (userEmails, userNames) VALUES ('test@email.com', 'john doe');
+INSERT INTO users (userEmails, userfNames, userlNames, userPwords) VALUES ('test@email.com', 'john', 'doe', 'hashedPassword');
 
 CREATE TABLE discussion (
   id SERIAL PRIMARY key,

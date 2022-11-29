@@ -242,6 +242,36 @@ p {
   background-color: #d085b8; /* Background on hover */
 }
 
+#registration #container {
+  width: 320px;
+  margin: auto;
+  box-shadow: 10px 5px 5px black;
+  border: 2px solid;
+  border-color: black;
+}
+#registration body ul,
+li {
+  list-style-type: none;
+  margin: auto;
+}
+#registration ul {
+  width: fit-content;
+}
+#registration li {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: end;
+}
+#registration label {
+  display: inline-block;
+  width: 80px;
+}
+#registration input {
+  display: inline-block;
+  width: 180px;
+}
+
 /*Desktop Display*/
 @media screen and (min-width: 1000px) {
   /* comes into effect for screens greater than 1000 pixels */
