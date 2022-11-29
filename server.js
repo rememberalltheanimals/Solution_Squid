@@ -145,6 +145,14 @@ app.get('/fundraise', function (req, res) {
   res.render('pages/fundraise', args);
 });
 
+//quizzes.ejs
+app.get('/quizzes', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes', args);
+});
+
 //home.ejs
 app.get('/home', function (req, res) {
   args = {
