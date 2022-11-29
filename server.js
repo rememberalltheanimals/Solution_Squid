@@ -152,6 +152,27 @@ app.get('/quizzes', function (req, res) {
   };
   res.render('pages/quizzes', args);
 });
+//dynamic.ejs for Dynamic Planet
+app.get('/dynamic', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/dynamic', args);
+});
+//astronomy.ejs for Astronomy
+app.get('/astronomy', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/astronomy', args);
+});
+//remote.ejs for Remote Sensing
+app.get('/remote', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/remote', args);
+});
 
 //home.ejs
 app.get('/home', function (req, res) {
