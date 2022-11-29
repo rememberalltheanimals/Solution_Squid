@@ -5,4 +5,9 @@
   <a href="fundraise">Fundraise</a>
   <a href="travel">Travel</a>
   <a href="upcoming">Upcoming events</a>
+  <%if(!user){ %>
+  <a href="login">Login</a>
+  <%} else { %>
+    <a href="logout">Logout</a>
+  <% } %>
 </ul>
