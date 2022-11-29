@@ -19,3 +19,10 @@ userPwords TEXT NOT NULL
 );
 
 INSERT INTO users (userEmails, userfNames, userlNames, userPwords) VALUES ('test@email.com', 'john', 'doe', 'hashedPassword');
+
+CREATE TABLE discussion (
+  id SERIAL PRIMARY key,
+  post varchar(100)
+);
+
+INSERT INTO discussion (post) VALUES ('This is the original post');

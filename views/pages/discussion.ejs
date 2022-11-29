@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/styles.css"> 
+  <title>MHS Science Olympiad</title>
+</head>
+<body>
+  <header><%- include('header.ejs') %></header>
+  <h1>MHS Science Olympiad - Discussion Board</h1>
+  <textarea id="textarea" placeholder="Enter details here..."  rows="5" cols="60" name="description" maxlength="100"></textarea>
+  <button id="11" onclick="javascript:send(document.getElementById('textarea').value);">Submit</button>
+  <div id="container">
+    <% feedbackCount.forEach(function(b) { %>
+      <p id="<%= b.id %>Advice">
+        <%= b.post %>
+      </p> 
+    <% }); %>
+    <p id="output"></p>
+    </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const testButton = document.getElementById('11');
+    const output = document.getElementById('output');
+    const send = async function (buttonId) {
+      
+      document.getElementById('textarea').value = ""
+      
+      const response = await fetch(`/discussion`, {
+        method: 'POST',
+        headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      id: buttonId,
+    }),
+  });
+  const result = await response.json();
+  if (result.error) {
+    output.innerHTML = `<strong>ERROR: ${result.error.routine}</strong>`;
+  } else {
+    location.reload();
+  }
+};
+
+//Event listeners for web sockets.
+testButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  socket.emit('Socket established');
+});
+
+//"socket.on" functions.
+socket.on('Socket established', function () {
+  const button = document.getElementById('11');
+  button.innerHTML = 'success';
+});
+
+  </script>
+</body>
+</html>

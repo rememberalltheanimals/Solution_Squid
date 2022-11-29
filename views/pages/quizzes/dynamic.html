@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <link rel="stylesheet" href="../../../public/assets/styles.css">
+    <!-- Adding Additional Quiz Styles Here -->
+    <style>
+        .quiz {
+            border: 5px outset #F79DA8;
+            background-color: #3B0028;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        a {
+            color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Dynamic Planet Practice Quiz</h2>
+
+    <div class="quiz" id="quiz"></div>
+    <button class= "quiz" id="submit">Submit Quiz</button>
+    <div id="results"></div>
+
+    <h3><a href="../quizzes.html">Back</a></h3>
+
+    <p>Disclaimer: this quiz is not intended to be a replacement for practice. These are a sample of questions that may be found in the event.</p>
+
+    <script>
+        //declare variables
+        const quizContainer = document.getElementById('quiz');
+        const resultsContainer = document.getElementById('results');
+        const submitButton = document.getElementById('submit');
+
+        const testQuestions = [ //list of questions
+            {
+                question: "1. Freshwater has the salinity of less than _____ ppm?",
+                answers: {
+                    a: "550 ppm",
+                    b: "500 ppm",
+                    c: "1000 ppm"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "2. Lake Baikal’s depths were first majorly explored in 1989 by a group of scientists from National Geographic Society & the Soviet Academy of Sciences. The life found at the bottom of the lake most closely resembles what type of ecosystem?",
+                answers: {
+                    a: "Life in the upper ocean",
+                    b: "Life in Volcanoes",
+                    c: "Life in hydrothermal vents (black and white smokers)"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "3. What are the general steps of meander formation in streams?",
+                answers: {
+                    a: "Meanders are formed when water erodes sediment in the outer bank of a stream.",
+                    b: "Meanders are formed when wind erodes sediment in the outer bank of a stream.",
+                    c: "Meanders are formed when water AND wind erodes sediment in the outer bank of a stream."
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "4. How common are meanders in streams?",
+                answers: {
+                    a: "They are mildly common especially in the middle & lower course of a bridge",
+                    b: "They are very common especially in the middle & lower course of a bridge",
+                    c: "They are not common especially in the middle & lower course of a bridge"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "5. What are the most common water pollutants in freshwater rivers worldwide?",
+                answers: {
+                    a: "There is an equal amount of every pollutant.",
+                    b: "Oxygen and Carbon, as it comes from other lifestyles. This leads to air pollution, causing strain in the atmosphere.",
+                    c: "Phosphorus and nitrogen, as it comes from agricultural fertilizers and residential runoff. The nitrogen and phosphorus (especially) can lead to watershed eutrophication, eventually leading to “dead zones”."
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "6. Ox-bow lakes are formed from…",
+                answers: {
+                    a: "Streams",
+                    b: "Meanders",
+                    c: "Glaciers"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "7. Which drainage pattern is the most common?",
+                answers: {
+                    a: "Dendritic",
+                    b: "Delta",
+                    c: "Flowing"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "8. Which factor influences the quality of drinking water the most?",
+                answers: {
+                    a: "SDT",
+                    b: "TSD",
+                    c: "TDS"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "9. What is the main difference between a braided stream channel & an anastomose channel?",
+                answers: {
+                    a: "Anastomose channels are basically guided stream channels, and they divide or reconnect as easily as braided stream channels.",
+                    b: "Anastomose channels are basically braided stream channels, but they don’t divide or reconnect as easily as braided stream channels.",
+                    c: "Anastomose channels are basically flowing stream channels, but they don’t divide or reconnect as easily as braided stream channels."
+                },
+                correctAnswer: "b"
+            }
+            ];
+
+        function buildQuiz(){ //function to build a quiz
+            //variable to store the HTML output
+            const output = [];
+
+            //for each question...
+            testQuestions.forEach(
+                (currentQuestion, questionNumber) => {
+
+                    //variable to store the list of possible answers
+                    const answers = [];
+
+                    //and for each available answer...
+                    for(letter in currentQuestion.answers){
+
+                    //...add an HTML radio button
+                    answers.push(
+                        `<label>
+                        <input type="radio" name="question${questionNumber}" value="${letter}">
+                        ${letter})
+                        ${currentQuestion.answers[letter]}
+                        </label><br>`
+                    );
+                    }
+
+                    //add this question and its answers to the output
+                    output.push(
+                    `<div class="question"> ${currentQuestion.question} </div>
+                    <div class="answers"> ${answers.join('')} </div><br>`
+                    );
+                }
+            );
+
+            //combine output list into one string of HTML and add to page
+            quizContainer.innerHTML = output.join('');
+        }
+
+        function showResults(){ //function to show the results of the quiz
+            //get answer containers from our quiz
+            const answerContainers = quizContainer.querySelectorAll('.answers');
+
+            //keep track of user's answers
+            let numCorrect = 0;
+
+            //for each question...
+            testQuestions.forEach( (currentQuestion, questionNumber) => {
+
+            //find selected answer
+            const answerContainer = answerContainers[questionNumber];
+            const selector = `input[name=question${questionNumber}]:checked`;
+            const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+            //if answer is correct
+            if(userAnswer === currentQuestion.correctAnswer){
+                //add to the number of correct answers
+                numCorrect++;
+
+                //highlight the answers green
+                answerContainers[questionNumber].style.backgroundColor  = 'green';
+            }
+            //if answer is wrong or blank
+            else{
+                //highlight the answers red
+                answerContainers[questionNumber].style.backgroundColor  = 'red';
+            }
+            }); //count of correct answers will still work. 
+
+            //show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${testQuestions.length}`;
+        }
+
+        //immediately display quiz
+        buildQuiz();
+
+        //show results when submitted
+        submitButton.addEventListener('click', showResults);
+
+    </script>
+</body>
+</html>
