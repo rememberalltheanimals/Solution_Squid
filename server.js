@@ -146,6 +146,14 @@ app.get('/fundraise', function (req, res) {
   res.render('pages/fundraise', args);
 });
 
+//fortune_cookie.ejs
+app.get('/fortune_cookie', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/fortune_cookie', args);
+});
+
 //quizzes.ejs
 app.get('/quizzes', function (req, res) {
   args = {
