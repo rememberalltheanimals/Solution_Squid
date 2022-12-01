@@ -112,6 +112,12 @@ app.get('/emailSuccess', function (req, res) {
   };
   res.render('pages/emailSuccess', args);
 });
+app.get('/checklist', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/checklist', args);
+});
 app.get('/discussion', async (req, res) => {
   try {
     const client = await pool.connect();
