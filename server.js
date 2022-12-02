@@ -1,5 +1,4 @@
 require('dotenv').config(); //read enviroment variables from .env
-const { count } = require('console');
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -49,7 +48,7 @@ const { initialize } = require('passport');
 const { Session } = require('express-session');
 const io = new Server(server);
 
-//Database reference
+//Database instance
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
@@ -318,9 +317,6 @@ app.get('/', async (req, res) => {
 //feedback.ejs
 app
   .get('/feedback', async (req, res) => {
-    args = {
-      user: checkUser(req),
-    };
     try {
       const client = await pool.connect();
 
