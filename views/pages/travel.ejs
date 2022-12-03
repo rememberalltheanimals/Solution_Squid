@@ -36,7 +36,7 @@
         margin-left: -80px;
     }
 
-    /* Popup arrow */
+    /* Popup arrow 
     .popup .popuptext::after {
         content: "";
         position: absolute;
@@ -46,7 +46,7 @@
         border-width: 5px;
         border-style: solid;
         border-color: #000 transparent transparent transparent;
-    }
+    }*/
 
     /* Toggle this class - hide and show the popup */
     .popup .show {
@@ -60,6 +60,23 @@
         margin-left: 2px;
     }
 
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 3px;
+    }
+
+    th {
+        font-size: larger;
+        background-color: #928800;
+        color: #000;
+    }
+     tr:nth-child(even){
+        background-color: #555555;
+    }
+    tr:nth-child(odd){
+        background-color: #383838;
+    }
     </style>
 </head>
 <body>
@@ -69,10 +86,62 @@
     </header>
 
     <h2>
-        Click on an event for travel information:
+        Travel Information - for upcoming events.
     </h2>
 
-    <p>
+    <table>
+        <tr >
+            <th style="width: 120px;">Location</th>
+            <th style="width: 160px;">Mode</th>
+            <th style="width: 80px;">Depature</th>
+            <th style="width: 80px;">Return</th>
+            <th style="width: 80px;">Hotel</th>
+        </tr>
+        <tr>
+            <td>Boyceville</td>
+            <td>Yellow School Bus</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Marquette</td>
+            <td>TBD Bus</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Medford</td>
+            <td>Yellow School Bus</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>UW - River Falls</td>
+            <td>Yellow School Bus</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Menomonie High</td>
+            <td>None</td>
+            <td>None</td>
+            <td>None</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>State Tournament</td>
+            <td>TBD Bus</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>Yes</td>
+        </tr>
+    </table>
+
+    <!-- <p>
         Completed Events: <br>
         <ol>
             <button class="popup" onclick="showEvent('popupEvent1')">Belleville, WI (11-12-2022)
@@ -175,16 +244,16 @@
         </ol>
 
         Last Updated: November 20, 2022
-    </p>
+    </p> -->
 
     <footer>
         MHS Science Olympiad Team
     </footer>
 
-    <script>
+    <!-- <script>
         let storedEvent;
         function showEvent(event){
-            //Hide popups currently showing
+            // Hide popups currently showing
             hidePopups = document.getElementsByClassName('show')
             if(hidePopups.length > 0){  
                 for (let i = 0; i < hidePopups.length; i++){
@@ -201,7 +270,7 @@
                 storedEvent = "";
             }
             
-        }
+        } -->
         
     </script>
 </body>
