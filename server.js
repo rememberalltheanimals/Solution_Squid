@@ -158,12 +158,20 @@ app.get('/fortune_cookie', function (req, res) {
   };
   res.render('pages/fortune_cookie', args);
 });
+
 //blog.ejs
 app.get('/blog', function (req, res) {
   args = {
     user: checkUser(req),
   };
   res.render('pages/blog', args);
+});
+//blog.ejs
+app.get('/resources', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages//blog/resources', args);
 });
 
 //quizzes.ejs
