@@ -68,6 +68,13 @@ header {
   border-bottom: 2px solid #d085b8;
 }
 
+header a {
+  color: #d085b8;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 24px;
+}
+
 header h1 {
   max-width: 300px;
   /*ONLY WHEN THERE IS A LOGO text-indent: -9999; */
@@ -120,11 +127,6 @@ nav a {
 
 nav a:hover {
   background-color: #340324;
-}
-
-p a {
-  color: #fff;
-  text-decoration: underline;
 }
 
 ol {
@@ -200,6 +202,18 @@ p {
   font-variant: normal;
   font-weight: 400;
   line-height: 20px;
+}
+
+p a {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  color: #fff;
+  text-decoration: underline;
+}
+
+li a {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  color: #fff;
+  text-decoration: underline;
 }
 
 #navBtn {
