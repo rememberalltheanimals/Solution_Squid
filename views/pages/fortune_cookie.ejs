@@ -38,12 +38,11 @@
       const fortuneList = ["Cyber security is just one byte away!", "A bug in the hand is better than one as yet undetected.", "An elephant is a mouse with an operating system.", "BREAKFAST.COM Halted -- Cereal Port Not Responding.", "Real programs don't eat cache.", "Shift to the left! Shift to the right! Pop up, push down, byte, byte, byte!", "To be, or not to be, those are the parameters.", "Too many clicks spoil the browse.", "Would YOU pass a Turing test?", "A bug in the code is worth two in the documentation.", "Software is mind work. Having the right frame of mind is essential.", "The less time planning, the more time programming.", "Take time in life to smell the rabbits, eat the flowers, and pet the cactus.", "Research: See what everyone saw, but think what no one else thought.", "Upgrade: Take old bugs out, put new ones in.", "There's no place like http://www.home.com.", "Guessing and hoping it works is not programming. - Kevin Harris"];
 
 		  function getFortune() {
-        var randomnumber = Math.floor(Math.random() * (fortuneList.length));
-
-        return document.getElementById('quoteDisplay').innerHTML = fortuneList[randomNumber];
+        let randomnumber = Math.floor(Math.random() * (fortuneList.length));
+        return document.getElementById('quoteDisplay').innerHTML = fortuneList[randomnumber];
 		  }
 
-      cookie_btn.addEventListener("click", getFortune());
+      cookie_btn.addEventListener("click", getFortune);
 
     </script>
   </body>
