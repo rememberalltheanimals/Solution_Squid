@@ -106,3 +106,6 @@ dist
 .docx
 
 .json
+
+#VS Code configuration folders are not shared by everyone...
+.vscode

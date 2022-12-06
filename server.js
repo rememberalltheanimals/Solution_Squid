@@ -1,5 +1,4 @@
 require('dotenv').config(); //read enviroment variables from .env
-const { count } = require('console');
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -49,7 +48,7 @@ const { initialize } = require('passport');
 const { Session } = require('express-session');
 const io = new Server(server);
 
-//Database reference
+//Database instance
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
@@ -112,6 +111,12 @@ app.get('/emailSuccess', function (req, res) {
   };
   res.render('pages/emailSuccess', args);
 });
+app.get('/checklist', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/checklist', args);
+});
 app.get('/discussion', async (req, res) => {
   try {
     const client = await pool.connect();
@@ -152,6 +157,21 @@ app.get('/fortune_cookie', function (req, res) {
     user: checkUser(req),
   };
   res.render('pages/fortune_cookie', args);
+});
+
+//blog.ejs
+app.get('/blog', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/blog', args);
+});
+//blog.ejs
+app.get('/resources', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages//blog/resources', args);
 });
 
 //quizzes.ejs
@@ -326,9 +346,6 @@ app.get('/', async (req, res) => {
 //feedback.ejs
 app
   .get('/feedback', async (req, res) => {
-    args = {
-      user: checkUser(req),
-    };
     try {
       const client = await pool.connect();
 

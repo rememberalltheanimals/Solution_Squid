@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competition Checklist</title>
+  <link href="/assets/styles.css" rel="stylesheet">
+  <style>
+    .options {
+      font-size: 20px;
+      color: rgb(152, 141, 0);
+    }
+  </style>
+</head>
+<body onload="myFunction('Time')">
+
+  <header><%- include('header.ejs') %></header>
+  <h1>Competition Rules Checklist</h1>
+
+  <p>
+    Caution: We are not responsible if items on this checklist differ from the rules enforced on competition day. The rules in the rulebook take precedence. 
+    This page provides construction parameters and rules.
+  </p>
+
+  <ul class="options">
+    <li style="display:inline" onclick="myFunction('Time')">It's About Time | </li>
+    <li style="display:inline" onclick="myFunction('Trajectory')">Trajectory | </li>
+    <li style="display:inline" onclick="myFunction('WiFi')">WiFi Lab | </li>
+    <li style="display:inline" onclick="myFunction('Bridge')">Bridge | </li>
+    <li style="display:inline" onclick="myFunction('Detector')">Detector Building | </li>
+    <li style="display:inline" onclick="myFunction('Flight')">Flight | </li>
+    <li style="display:inline" onclick="myFunction('Scrambler')">Scrambler | </li>
+    <li style="display:inline" onclick="myFunction('Robo')">Robo-Cross</li>
+  </ul>
+
+  <div id="Time" class="divs">
+    <h3>It's about Time</h3>
+    <p>Construction Parameters</p>
+    <ol>
+        <li>Team has a device and makes an honest attempt to test a device.</li>
+        <li>Team impounds one device and all components that are integral to its operation (e.g. water, sand, etc.).</li>
+        <li>The impounded device and any storage boxes are clearly marked with the team’s school name and competition number. At impound, the device and all impounded components fit into an 80.0 cm x 80.0 cm x 80.0 cm cube and are moveable by the competing team members without outside assistance.</li>
+        <li>The device is constructed to be able to provide a single distinct audible and/or visual signal that will occur three times at equally spaced time intervals set by the Event Supervisor. Each occurrence of the signal is the same event produced by the same mechanism. The device itself produce the signal and the participant does not call out when the signal has been reached. The signal is distinct in that it only occurs at the end of each of the equally spaced time intervals.</li>
+        <li>The device does not contain electrical or electronic components. Electrical/electronic tools may be used for setup, calibration, & preparation before & between the time trails, as long as they are removed prior to the start of the time trial.</li>
+        <li>Commercial counters, tally devices, timepieces, and their parts are not used.</li>
+        <li>The device is designed, constructed, and operated so that it does not damage or alter the competition area, contains spillage, and minimizes possible impacts on other teams.</li>
+        <li>The device is designed and constructed so that it does not require manual intervention during a time trial.</li>
+        <li>Participants is able to answer questions regarding the design, construction, and operation of the device.</li>
+        <li>DEVICE MEETS ALL CONSTRUCTION PARAMETERS ABOVE DURING INSPECTION (Devices that do not meet construction specs will not be allowed to be tested until brought into specification. If any construction violations are corrected during the competition block, circle F. If the device is not brought into specification during the competition block, leave items 4-13 blank and do NOT enter into the spreadsheet.)</li>
+    </ol>
+    <p>Chart Score</p>
+    <ol>
+      <li>Of one graph/table selected by the Event Sup, it includes data spanning the possible time range (up to 2 points) </li>
+      <li>Of one graph/table selected by the Event Sup, it includes at least 10 data points in each data series (up to 2 points) </li>
+      <li>Of one graph/table selected by the Event Sup, it is properly labeled (e.g. title, team name, units) (up to 2 points) </li>
+      <li>oints for each distinct graph/table turned in (0.5 points for each, up to 2 points total) </li>
+      <li>Includes a proper materials list and diagram and digital fabrication information (if applicable) (up to 2 points)</li>
+    </ol>
+  </div>
+  <div id="Trajectory" class="divs">
+    <h3>Trajectory</h3>
+    <p>Construction Parameters</p>
+    <ol>
+      <li>Team operates safely & has a device within spec before the end of the allotted competition period.</li>
+      <li>When ready-to-launch, the launch device, projectiles, stabilizing weights, and all other device components fit in a 60.0 cm per side cube.</li>
+      <li>The launch force is supplied by non-metallic elastic solids such as rubber bands/tubing, wood, plastic, or bungee cords.</li>
+      <li>The triggering device when activated, does not contribute significant energy to the launch. It extends out of the lunch area, allow for competitors to remain at least 75 cm away from the launch area. It also does not pose a danger due to flying parts or excessive movement outside of launch area.</li>
+      <li>Team provides unmodified tennis, racquet, and/or Ping-Pong balls to be used as projectiles.</li>
+      <li>The launch device is designed and operated in such a way to not damage or alter the floor.</li>
+      <li>Electrical components are not part of the device or triggering device.</li>
+      <li>DEVICE MEETS ALL CONSTRUCTION PARAMETERS ABOVE DURING INSPECTION WITH NO CORRECTIONS NEEDED (If any construction violations are corrected during the competition block, circle F even if corrected.)</li>
+      <li>DEVICE MEETS ALL CONSTRUCTION PARAMETERS ABOVE BY THE END OF THE INSPECTION PERIOD (If any construction violations are not corrected during the competition block, circle F. teams may still be permitted to compete but will be ranked behind every team.)</li>
+    </ol>
+    <p>Chart Score</p>
+    <ol>
+      <li>Of one graphs/tables selected by the Event Sup, it includes data spanning ≥ 1 variable range in 4.a.ii. (up to 60 points) </li>
+      <li>Of one graphs/tables selected by the Event Sup, it includes at least 10 data points in each data series (up to 55 points) </li>
+      <li>Of one graphs/tables selected by the Event Sup, it is properly labeled (e.g. title, team name, units) (up to 40 points) </li>
+      <li>Points for each distinct graph/table turned in (30 points for each, up to 120 points total) </li>
+      <li>Includes a labeled device picture or diagram (up to 45 points) </li>
+      <li>Includes at least 2 example calculations (up to 50 points) </li>
+      <li>Properly formatted Design Log containing all the required elements is submitted (up to 30 points)</li>
+    </ol>
+  </div>
+  <div id="WiFi" class="divs">
+    <h3>WiFi Lab</h3> 
+    <p>Construction Parameters</p>
+    <ol>
+      <li>Device is brought in a box labeled with team name & number.</li>
+      <li>Team brings one pre-constructed antenna device.</li>
+      <li>The device fits within a 15.0 cm x 15.0 cm x 15.0 cm cube during all parts of the competition and is supported solely by the backplane and the SMA-Female connector mounted in the backplane.</li>
+      <li>The device includes an SMA-Male connector that can be connected to the backplane connector.</li>
+      <li>The device does not contain commercial antenna parts or magnets.</li>
+      <li>The device is entirely passive, contains no batteries, AC power or other energy sources.</li>
+      <li>The device is designed and operates in such a way to not damage or alter the backplane or SMA-F connector.</li>
+      <li>DEVICE MEETS ALL CONSTRUCTION PARAMETERS ABOVE DURING INSPECTION (Devices that do not meet construction specs will not be allowed to be tested until brought into specification. If any construction violations are corrected during the competition block, circle F. If the device is not brought into specification during the competition block, leave items 3-12 blank and do NOT enter into the spreadsheet.)</li>
+    </ol> 
+    <p>Chart Score</p>
+    <ol>
+      <li>Of one graphs/tables selected by the Event Sup, it includes data spanning at least 5m distance (up to 2 points)</li>
+      <li>Of one graphs/tables selected by the Event Sup, it includes at least 10 data points in each data series (up to 2 points)</li>
+      <li>Of one graphs/tables selected by the Event Sup, it is properly labeled (e.g. title, team name, units) (up to 2 points)</li>
+      <li>Points for each distinct graph/table turned in (0.5 points for each, up to 2 points total)</li>
+      <li>A complete Design Log is submitted (up to 2 points)</li>
+    </ol>
+  </div>
+  <div id="Bridge" class="divs">
+    <h3>Bridge</h3>
+    <p>Safety Materials</p>
+    <ol>
+      <li>Submit Estimated Load in Grams</li>
+      <li>Completed Design Log</li>
+      <li>Structure can be loaded (e.g. can accommodate and hold Loading Assembly, participants wear eye protection). (If false, team does not test and is placed in Tier 3.)</li>
+    </ol>
+    <p>Construction and Competition</p>
+    <ol>
+      <li>Team enters only one Structure, built prior to the competition.</li>
+      <li>Participants do not bring any equipment such as levels or squares.</li>
+      <li>The Structure is a single structure with no separate, loose, sliding, or detachable pieces. </li>
+      <li>Structure is constructed of wood and bonded by adhesive with no other materials used. Besides ink barcodes or markings from the construction process, the wood is not painted, soaked or coated in glue, color enhanced, or affixed with tape/preprinted/paper labels. Adhesive tapes are not used. </li>
+      <li>Students are able to answer questions regarding the design, construction, and operation of the device. </li>
+      <li>Alterations, substitutions, and repairs are not made to the Structure after the check-in process is started.</li>
+      <li>Once participants enter the event area to compete, they do not leave or receive outside assistance, materials, or communication until they are finished competing. </li>
+      <li>Participants place the Test Supports within the Bearing Zone (45 cm span) of the Test Apparatus, then place their Structure within the Contact Zone on the Test Supports (10 cm). They place the Loading Assembly to load the Structure. </li>
+      <li>The Structure is designed to sit on top of the Test Supports and support the Loading Assembly at the center of the spanned opening. The Structure does not touch the vertical sides of the Test Supports or the Test Base before the test. </li>
+      <li>The Structure is designed to hold the bottom of the Loading Block ≤ 1 cm above the plane made by the tops of the Test Supports and above the plane made by the top of the Test Base. The Structure is designed to only touch the Test Supports within the Contact Zone. Before loading, no part of the Structure goes below the plane made by the tops of the Test Base. </li>
+      <li>Once loading of sand has begun, the Structure is not further adjusted. </li>
+      <li>Participants do not directly contact the bucket and only stabilize the bucket by using the tips of the provided Bucket Stabilizing Sticks.</li>
+      <li>ALL CONSTRUCTION AND COMPETITION PARAMETERS ABOVE ARE MET (IF FALSE, TIER 2)</li>
+    </ol>
+  </div>
+  <div id="Detector" class="divs">
+    <h3>Detector Building</h3>
+    <p>Design Log Points(max 4 points each)</p>
+    <ol>
+      <li>A top-down photograph, diagram, or picture of the Device with the school name labels on the device, labels identifying all the components and detailing their functions. This section also includes a brief summary explaining how the Device was constructed. </li>
+      <li>A data table with at least 10 trials showing the raw sensor reading versus the corresponding masses in grams. If multiple fixed resistors are tried, data and graphs of all potential resistors are included. </li>
+      <li>Scatter-plot graph of this data with mass in grams on the Y-axis and voltage on the X-axis. </li>
+      <li>Function graph of mathematical model supported by the data overlaid on a scatter-plot of the data. </li>
+      <li>Equation of the above mathematical model used to convert measured voltage to the corresponding mass in grams highlighted for easy identification.</li>
+      <li>Printout of program with code highlighted showing this exact mathematical equation or its code implementation converting raw sensor reading to grams. </li>
+      <li>On the same program printout, the code that will illuminate the appropriate LED(s) according to their assigned concentration ranges is highlighted </li>
+      <li>There is a front cover labeled with the Team name and the Team Number for the current tournament.</li>
+      <li>If digital manufacturing techniques were used as part of the build, put 4 points for each section of 4.c. that was not addressed or is incomplete (Max 12 points total)</li>
+      <li>1 point of each item before item number 8 that was not provided with the appropriate unit (Max 4 Points)</li>
+    </ol>
+    <p>Construction Parameters Part 1</p>
+    <ol>
+      <li>Device is built using a microcontroller or microcontroller board, a display, LED lights, and a participantbuilt sensor/probe. The sensor produces a voltage which varies according to the mass of the object. WiFi/Internet connection is not used at any time during competition. </li>
+      <li>The sensor is constructed by the student from fundamental electronic components such as force sensitive resistors, strain gauges, capacitors, resistors, wires, DIP package integrated circuits, and surface mount adapter boards. All circuits are assembled on a breadboard. No preassembled devices, load cells, printed circuit boards (except digital display boards), integrated circuit daughterboards. </li>
+      <li>The construction of the device allows for the placement of an unknown mass ranging from 30 to 1,000 grams of at most 8 cm in diameter and no height obstructions for mass determination. The Device does not use any code libraries for calibration of the device.</li>
+    </ol>
+    <p>Construction Parameters Part 2</p>
+    <ol>
+      <li>The Device has a digital display that clearly shows voltage, and mass in grams to the nearest 0.1 grams. If a laptop is used for display purposes, it is not used for the Written Test portion.</li>
+      <li>The Device is able to indicate the specific concentration zone using three separate LEDs – one red, one green, and one blue. RGB LEDs, if used, is wired for only one color.</li>
+    </ol>
+  </div>
+  <div id="Flight" class="divs">
+    <h3>Flight</h3>
+    <p>Construction Parameters for each aircraft</p>
+    <ol>
+      <li>If kits are used, they do not contain any pre-glued joints or pre-covered surfaces. </li>
+      <li>If a helicopter is used, it has a flat balsa wood disc, large enough to cover a dime, as the upper most part of the helicopter, the part that would touch a flat ceiling first during flight </li>
+      <li>If a glider is used, the handheld launcher in its ready to use configuration fits in the box with the glider when it is presented for inspection. </li>
+      <li>Boron filaments are not used in the construction of the aircraft or box. </li>
+      <li>The aircraft in its flight configuration & during flight fit into a team-provided rectangular box of 39.0 cm x 28.5 cm x 63.0 cm (Div B) or 33.0 cm x 27.0 cm x 43.0 cm (Div C). The aircraft’s overall dimensions do not change after being removed from the box. </li>
+      <li>All aircraft-lifting forces are generated by wing(s) or rotor style flying surfaces. </li>
+      <li>Total mass of the aircraft, excluding the rubber motor(s), is 8.00 g or more.</li>
+      <li>Variable-pitch propellers that include mechanisms to actively change the propeller/rotor diameter or blade angle are not used. </li>
+      <li>The sole power for the aircraft comes from rubber motor(s) For single-motor aircraft, each motor, including any attachments such as O-rings, is less than 2.00 g. For multimotor aircraft, each set of motors do not exceed a combined mass of 2.00g and is checked in as a set. If different sets of motors are checked in, individual motors are not interchanged between sets. </li>
+      <li>Students are able to answer questions regarding the design, construction, and operation of the device per the Building Policy found on www.soinc.org </li>
+      <li>Aircraft are labeled so the Event Supervisor can easily identify to which team it belongs.</li>
+      <li>AIRCRAFT MEETS ALL CONSTRUCTION PARAMETERS ABOVE</li>
+      <li>The airplane has the entire surface of the wing between at least 2 ribs or at least one of the wingtip fences or a vertical stabilizer completely marked with black marker or black tissue, OR the whole surface is black if no ribs are present, OR at least one black-colored lifting surface if no wings or vertical stabilizers are present.</li>
+    </ol>
+    <p>Flight-Design Log</p>
+    <ol>
+      <li>The Flight Log is complete</li>
+      <li>The Design Log is complete</li>
+    </ol>
+  </div>
+  <div id="Scrambler" class="divs">
+    <h3>Scrambler</h3>
+    <p>Eye Protection Required for participation. </p>
+    <p>Log</p>
+    <ol>
+      <li>Is the practice log complete and impounded? Complete means including ≥ 4 parameters (Target Distance, Vehicle Distance from Target, Time, and 1 additional) for 10 or more practice runs. Log has a front cover labeled with the Team Name & Number.</li>
+      <li>Is the design log completed and impounded? Complete means including materials used to construct the Vehicle, a labeled diagram or picture that identifies and describes the parts. All numerical value is labeled with standard units appropriate to the dimension being measured. Log has a front cover labeled with the Team Name & Number.</li>
+    </ol>
+    <p>Construction Parameters</p>
+    <ol>
+      <li>The Scrambler consist of an egg transport (Vehicle) and an energy propulsion system. </li>
+      <li>The entire Scrambler including the egg and falling mass, in the ready-to-run configuration, completely fit within an imaginary rectangular box with a 75.0 cm x 75.0 cm base and a 50.0 cm height. </li>
+      <li>All energy used to propel Vehicle come from falling mass not exceeding 1.50 kg. The mass is part of the energy propulsion system and does not directly contact the venue floor. </li>
+      <li>The stopping mechanism is contained completely within the Vehicle and work automatically. The Vehicle is not remotely controlled or tethered. </li>
+      <li>Egg rests on two ¼” wooden dowels extending 3.0-4.0 cm from rigid, unpadded and flat backstop. Bottom of wooden dowels are 5.0-10.0 cm above Track and within 1.0 cm from bottom of backstop. Egg backstop is built of rigid material and has a flat surface of 5.0±0.5 cm wide by 5.0±0.5 cm high by 1.1 cm or thick. </li>
+      <li>¼” wooden dowel is attached vertically and directly to the top of the rigid backstop and it extends ≥ 20.0 cm above the Track’s surface. </li>
+      <li>Any additional sources of kinetic energy is in their lowest energy state in the ready-to-run configuration. Any pre-loaded energy storage devices do not provide kinetic energy to propel the Vehicle. </li>
+      <li>Competitors design the Scrambler to start by using an unsharpened #2 pencil with an unused eraser to actuate release mechanism. Actuating release mechanism does not impact additional energy to Vehicle. </li>
+      <li>All parts of the Vehicle moves as a whole; no anchors, tethers, tie downs, or other separate pieces are used. The only parts to contact the floor during the run are those already in contact with the floor in the ready-to-run position. All wheels are in contact with the floor at launch. No pieces fall off during the run.</li>
+      <li>No electrical or electronic devices are used on the Scrambler, its alignment devices, or any tools.</li>
+      <li>THE NUMBER OF CONSTRUCTION PARAMETERS MET (Max = 10)</li>
+    </ol>
+  </div>
+  <div id="Robo" class="divs">
+    <h3>Robo-Cross</h3>
+    <p>Construction Parameters</p>
+    <ol>
+      <li>The robot may be controlled remotely by radio, infrared, or hard-wired control boxes. The robot and controllers are defined as “the device”.</li>
+      <li>A commercial kit must have at least one functional modification, defined as a modification such that the lack of it will result in the robot not working or working differently.</li>
+      <li>The robot in the ready to run position must fit entirely inside an imaginary 28.0 cm cube.</li>
+      <li>The robot may drop passive components but must not separate into two or more active components.</li>
+      <li>All robot motion must be powered by only by electrical, elastic, or gravitational energy. These forms of energy must not be converted to other forms such as hydraulics or pneumatics to power the robot.</li>
+      <li>Only commercial batteries may be used to energize each of the electrical circuits in the robot and its controller(s). Multiple batteries may be connected in series or parallel as long as the expected voltage output across any points does not exceed 14.4 volts as calculated using their labeled voltage. Teams must be able to show the event supervisor the labeled voltage at check-in. All power sources must be contained either in the robot or as part of the controller(s).</li>
+      <li>Competitors must go to http://www.soinc.org/robo-cross-b, to check legal and permitted frequencies for the radio controlled equipment for surface devices.</li>
+      <li>Students must be able to answer questions regarding the design, construction, and operation of the device per the building policy found on www.soinc.org.</li>
+    </ol>
+    <p>Technical Documentation</p>
+    <ol>
+      <li>Illustration (any form, photo, drawings, etc.) of the basic structure of the device with labels that must show all motors (numbered for reference), all energy sources, and controls used to interact with the robot. </li>
+      <li>Operating Description requires robot reaction to each control input, and tentative/proposed plan of movement (i.e. which objects in the competition area will be moved and how the robot plans to move each object)</li>
+      <li>Practice Log requiring 10 runs and 3 parameters (requiring score and time, plus any additional data recorded).</li>
+    </ol>
+  </div>
+
+  <script>
+    function myFunction(currentDiv) {
+      const arr = ["Time", "Trajectory", "WiFi", "Bridge", "Detector", "Flight", "Scrambler", "Robo"];
+      arr.forEach((element) => {
+        document.querySelector("#" + element).style.display = "none";
+      });
+      document.querySelector("#" + currentDiv).style.display = "block";
+    }
+  </script>
+</body>
+
+</html>
