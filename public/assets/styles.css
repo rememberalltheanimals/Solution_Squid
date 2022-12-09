@@ -183,6 +183,16 @@ h3 {
   line-height: 24px;
 }
 
+h3 a {
+  color: #fff;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
 h4 {
   color: #f79ea8;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
@@ -255,6 +265,24 @@ li a {
   background-color: #d085b8; /* Background on hover */
 }
 
+.quiz {
+  border: 5px outset #F79DA8;
+  background-color: #3B0028;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.quizBtn {
+  border: none;
+  background-color: #ffd700;
+  color: #3B0028;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px;
+}
+
 #registration #container {
   width: 320px;
   margin: auto;
@@ -300,7 +328,7 @@ li {
     font-size: 48px;
   }
   nav {
-    align-content: right;
+    align-content: flex-start;
     display: block;
     padding-right: 0;
     min-width: 1100px;
@@ -328,7 +356,7 @@ li {
     font-size: 40px;
   }
   nav {
-    align-content: right;
+    align-content: flex-start;
     display: block;
     margin: 0;
   }
