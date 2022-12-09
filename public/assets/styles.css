@@ -174,10 +174,9 @@ h2 {
 }
 
 h3 {
-  color: #340324;
-  background-color: #ffd700;
+  color: #f79ea8;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
-  font-size: 20px;
+  font-size: 26px;
   font-style: normal;
   font-variant: normal;
   font-weight: 700;
@@ -185,9 +184,9 @@ h3 {
 }
 
 h4 {
-  color: #340324;
+  color: #f79ea8;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-style: normal;
   font-variant: normal;
   line-height: 24px;
