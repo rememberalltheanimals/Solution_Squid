@@ -46,6 +46,7 @@ const { Server } = require('socket.io');
 const { Socket } = require('dgram');
 const { initialize } = require('passport');
 const { Session } = require('express-session');
+const { response } = require('express');
 const io = new Server(server);
 
 //Database instance
@@ -236,6 +237,8 @@ app
       const fName = req.body.fName;
       const lName = req.body.lName;
       const email = req.body.email;
+      const emailList = req.body.emailList;
+      let signUp;
 
       //regex validates email address
       const validateEmail = (email) => {
@@ -243,6 +246,12 @@ app
           /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
       };
+
+      if (emailList == 'true') {
+        signUp = 1;
+      } else {
+        signUp = 0;
+      }
 
       if (!validateEmail(email)) {
         req.flash(
@@ -252,12 +261,11 @@ app
         res.redirect('/registration');
       } else {
         //SQL statements for inserting user and checking if user is already inserted.
-        const insertSQL = `INSERT INTO users (userEmails, userfNames, userlNames, userPwords) VALUES ($1, $2, $3, $4);`;
+        const insertSQL = `INSERT INTO users (userEmails, userfNames, userlNames, userPwords, emailList) VALUES ($1, $2, $3, $4, $5);`;
         const checkSQL = `SELECT * FROM users WHERE userEmails = $1`;
 
         //if email is registered tell user else insert user
         pool.query(checkSQL, [email], (err, results) => {
-          console.log(results.rowCount);
           if (results.rowCount > 0) {
             req.flash('email_in_use', 'This email is already registered.');
             res.redirect('/registration');
@@ -270,11 +278,11 @@ app
                   fName,
                   lName,
                   hash,
+                  signUp,
                 ]);
                 const response = {
                   newId: insert ? insert.rows[0] : null,
                 };
-
                 // res.json(response);
                 client.release();
               });
@@ -287,12 +295,13 @@ app
       //if something goes wrong bring user back to registration page.
     } catch (err) {
       res.redirect('/registration');
-      res.set({
-        'Content-Type': 'application/json',
-      });
-      res.json({
-        error: err,
-      });
+      // res.set({
+      //   'Content-Type': 'application/json',
+      // });
+      console.log(err);
+      // res.json({
+      //   error: err,
+      // });
     }
   });
 
@@ -328,12 +337,12 @@ app.get('/logout', (req, res) => {
 });
 
 //upcoming.ejs
-app.get('/upcoming', function (req, res) {
-  args = {
-    user: checkUser(req),
-  };
-  res.render('pages/upcoming', args);
-});
+// app.get('/upcoming', function (req, res) {
+//   args = {
+//     user: checkUser(req),
+//   };
+//   res.render('pages/upcoming', args);
+// });
 
 //root page - currently home.ejs
 app.get('/', async (req, res) => {
@@ -408,12 +417,12 @@ app
 
 //emailsignup.ejs - will be replaced with new functionallity in register.ejs eventually
 app
-  .get('/emailSignup', function (req, res) {
-    args = {
-      user: checkUser(req),
-    };
-    res.render('pages/emailSignup', args);
-  })
+  // .get('/emailSignup', function (req, res) {
+  //   args = {
+  //     user: checkUser(req),
+  //   };
+  //   res.render('pages/emailSignup', args);
+  // })
   .post('/discussion', async (req, res) => {
     res.set({
       'Content-Type': 'application/json',
@@ -449,7 +458,6 @@ app
       const client = await pool.connect();
       const emailValue = req.body.userEmail;
       const nameValue = req.body.userName;
-      console.log(emailValue, nameValue);
       const insertSql = `INSERT INTO userEmails (userEmails, userNames)
       VALUES ($1, $2);`;
       const insert = await client.query(insertSql, [emailValue, nameValue]);

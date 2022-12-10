@@ -1,26 +1,30 @@
+<div id="headWrapper">
 <h1>Menomonie Science Olympiad</h1>
-<button onclick="showNav()" id="navBtn" title="Show Navigation">Show<br>Menu</button>
+<button onclick="showNav()" id="navBtn" title="Show Navigation"><i class="fa fa-bars"></i></button>
 <nav>
   <ul>
-    <strong><a href="home">Home</a></strong>
+    <li id="homeBtn"><a href="home">Home</a></li>
     <%if(!user){ %>
-      <strong><a href="login">Login</a></strong>
+      <li id="loginBtn"><a href="login">Login</a></li>
       <%} else { %>
-        <strong><a href="logout">Logout</a></strong>
+        <li id="logoutBtn"><a href="logout">Logout</a></li>
       <% } %>
-    <a href="blog">Blog</a>
-    <a href="checklist">Checklist</a>
-    <a href="discussion">Discussion</a>
-    <a href="emailSignup">Email Signup</a>
-    <a href="feedback">Feedback</a>
-    <a href="fundraise">Fundraise</a>
-    <a href="travel">Travel</a>
+    <li><a href="blog">Blog</a></li>
+    <li><a href="checklist">lists</a></li>
+    <li><a href="discussion">Chat</a></li>
+    <!-- <li><a href="emailSignup">Signup</a></li> -->
+    <li><a href="feedback">Feedback</a></li>
+    <li><a href="fundraise">Fundraise</a></li>
+    <li><a href="travel">Travel</a></li>
     <!--<a href="upcoming">Upcoming events</a> -->
-    <a href="quizzes">Quizzes</a>
-    <a href="fortune_cookie">Fortune</a>
-    <a href="resources">Resources</a>
+    <li><a href="quizzes">Quizzes</a></li>
+    <li><a href="fortune_cookie">Fortune</a></li>
+    <li><a href="resources">Resources</a></li>
   </ul>
 </nav>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href= "../../public/assets/header.css" rel="stylesheet">
 <script>
   //when button is selected, show navigation.
   function showNav() {
@@ -31,13 +35,11 @@
     const headerOne = document.querySelector("h1");
 
     if (navShowContents.style.display === "block") { 
-        navShowContents.style.display = "none";
-        btnShowNavigation.innerHTML = "Show<br>Menu"; 
+        navShowContents.style.display = "none"; 
         headerOne.style.display = "block";
     } else {
         navShowContents.style.display = "block"
-        btnShowNavigation.innerHTML = "X";
-        headerOne.style.display = "none";
     }
   }
 </script>
+</div>

@@ -105,7 +105,7 @@
     </style>
   </head>
 
-  <body>
+  <body id="home">
   <header><%- include('header.ejs') %></header>
     <h1>Welcome!</h1>
     <h2>The website for the Menomonie High School (MHS) Science Olympiad team</h2>
@@ -113,21 +113,15 @@
     <div class="slideshow-container">
 
       <div class="images fade">
-        <div class="numbertext">1 / 3</div>
         <img src="/public/assets/logoPic.jpg" style="width:100%">
-        <div class="text">Logo</div>
       </div>
 
       <div class="images fade">
-        <div class="numbertext">2 / 3</div>
         <img src="/public/assets/img-robot-1.png" style="width:100%">
-        <div class="text">Robot</div>
       </div>
 
       <div class="images fade">
-        <div class="numbertext">3 / 3</div>
         <img src="/public/assets/img-parachute-1.png" style="width:100%">
-        <div class="text">Parachute</div>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -169,9 +163,9 @@
       }
     </script>
 
-  </body>
-
   <footer>
     <p>This website was created by the Solution Squid team</p>
   </footer>
+  </body>
+
 </html>

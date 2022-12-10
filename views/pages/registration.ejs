@@ -13,6 +13,7 @@
     <h3><%=messages.email_in_use%></h3>
   <% } %> 
   <div id="container">
+  <h1>Register</h1>
     <form action="/registration" method="POST">
       <ul>
         <li>
@@ -31,6 +32,13 @@
           <label for="password">Password: </label>
           <input type="password" id="password" name="password" required>
         </li>
+        <li id="emailCheck">
+          <label for="emailList">Email list:</label>
+          <select id="emailList" name="emailList">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </li>
         <li>
           <button type="submit">Register</button>
         </li>
@@ -38,7 +46,6 @@
     </form>
   </div>
   </body>
-
 <footer>
   <p>This website was created by the Solution Squid team</p>
 </footer>

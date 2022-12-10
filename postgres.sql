@@ -15,10 +15,11 @@ id SERIAL PRIMARY KEY,
 userEmails TEXT NOT NULL,
 userfNames TEXT NOT NULL,
 userlNames TEXT NOT NULL,
-userPwords TEXT NOT NULL
+userPwords TEXT NOT NULL,
+emailList bit
 );
 
-INSERT INTO users (userEmails, userfNames, userlNames, userPwords) VALUES ('test@email.com', 'john', 'doe', 'hashedPassword');
+INSERT INTO users (userEmails, userfNames, userlNames, userPwords, emailList) VALUES ('test@email.com', 'john', 'doe', 'hashedPassword', 1);
 
 CREATE TABLE discussion (
   id SERIAL PRIMARY key,

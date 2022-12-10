@@ -9,6 +9,7 @@
 </head>
 <body>
   <header><%- include('header.ejs') %></header>
+  <div id="loginWrapper">
   <h1>Login</h1>
  <%  if (messages.registered) { %>
     <h3><%=messages.registered%></h3>
@@ -34,6 +35,7 @@
     </form>
     <a href="/registration">Create an account</a>
   </div>
+</div>
 </body>
 
 <footer>
