@@ -6,16 +6,35 @@
     <link href= "../../public/assets/styles.css" rel="stylesheet">    
     <style>
       * {box-sizing: border-box}
-      body {font-family: Verdana, sans-serif; margin:0}
       .images {display: none}
       img {vertical-align: middle;}
 
       .slideshow-container {
-        max-width: 1000px;
+        max-width: 300px;
         position: relative;
         margin: auto;
       }
 
+      /*Desktop Display*/
+      @media screen and (min-width: 1000px) {
+        /* comes into effect for screens greater than 1000 pixels */
+        .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        }
+      }
+
+      /*Tablet Display */
+      @media screen and (min-width: 600px) and (max-width: 999px) {
+        /* comes into effect for screens between 600 and 1000 pixels */
+        .slideshow-container {
+        max-width: 590px;
+        position: relative;
+        margin: auto;
+        }
+      }
+      
       .prev, .next {
         cursor: pointer;
         position: absolute;
@@ -87,6 +106,8 @@
 
   <body>
   <header><%- include('header.ejs') %></header>
+    <h1>Welcome!</h1>
+    <h2>The website for the Menomonie High School (MHS) Science Olympiad team</h2>
 
     <div class="slideshow-container">
 

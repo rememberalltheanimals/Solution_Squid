@@ -166,12 +166,12 @@ app.get('/blog', function (req, res) {
   };
   res.render('pages/blog', args);
 });
-//blog.ejs
+//resources.ejs
 app.get('/resources', function (req, res) {
   args = {
     user: checkUser(req),
   };
-  res.render('pages//blog/resources', args);
+  res.render('pages/resources', args);
 });
 
 //quizzes.ejs

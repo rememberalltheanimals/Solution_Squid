@@ -68,21 +68,67 @@ header {
   border-bottom: 2px solid #d085b8;
 }
 
-header a {
-  color: #d085b8;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  font-size: 24px;
+header nav {
+  display: none;
+  float: none;
+  background-color: #441e04;
+  width: auto;
+  padding: 0;
+}
+
+header nav ul {
+  padding: 0;
+  text-align: left;
+}
+
+header nav a {
+  display: inline-block;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  width: 100px;
+  text-align: center;
+  color: #41040b;
+  background-color: #d085b8;
+  border: 3px solid #ffd700;
+  margin: 1%;
+  padding: 15px;
+}
+
+#loginNav {
+  background-color: #ffd700;
+  border: 3px solid #d085b8;
+}
+
+#navBtn {
+  display: block;
+  position: fixed; /* Fixed/sticky position */
+  top: 10px; /* Place the button 10px from the top of the page */
+  right: 10px; /* Place the button 10px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #d085b8; /* Set a background color */
+  color: #fff; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#navBtn:hover {
+  background-color: #ffd700; /* Background on hover */
+  color: #41040b; /* Text color */
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #340324;
 }
 
 header h1 {
+  color: #ffd700;
+  font-size: 30px;
   max-width: 300px;
   /*ONLY WHEN THERE IS A LOGO text-indent: -9999; */
-}
-
-header h1 a {
-  color: #fff;
-  text-decoration: none;
 }
 
 h1 {
@@ -93,40 +139,6 @@ h1 {
   font-weight: 700;
   line-height: 34px;
   color: #988d00;
-}
-
-nav {
-  display: none;
-  float: none;
-  background-color: #441e04;
-  width: auto;
-  padding: 0;
-}
-
-nav ul {
-  padding: 0;
-  text-align: center;
-}
-
-nav li {
-  display: inline-block;
-  width: 100px;
-  font-size: 110%;
-  text-align: center;
-  background-color: #f79ea8;
-  border: 3px solid #d085b8;
-  margin: 1%;
-  padding: 15px;
-}
-
-nav a {
-  color: #fff;
-  font-family: Tahoma, Verdana, Segoe, sans-serif;
-  text-decoration: none;
-}
-
-nav a:hover {
-  background-color: #340324;
 }
 
 ol {
@@ -223,26 +235,6 @@ li a {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   color: #fff;
   text-decoration: underline;
-}
-
-#navBtn {
-  display: block;
-  position: fixed; /* Fixed/sticky position */
-  top: 30px; /* Place the button at the top of the page */
-  right: 10px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #520037; /* Set a background color */
-  color: #fff; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-}
-
-#navBtn:hover {
-  background-color: #d085b8; /* Background on hover */
 }
 
 #myBtn {
