@@ -335,9 +335,6 @@ li {
     margin: 1%;
     padding: 10px;
   }
-  #navBtn {
-    display: none;
-  }
 }
 
 /*Tablet Display */
@@ -361,8 +358,5 @@ li {
     border: 3px solid #d085b8;
     margin: 1%;
     padding: 10px;
-  }
-  #navBtn {
-    display: none;
   }
 }
