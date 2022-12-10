@@ -1,8 +1,13 @@
 <h1>Menomonie Science Olympiad</h1>
-<button onclick="showNav()" id="navBtn" title="Show Navigation">Menu</button>
+<button onclick="showNav()" id="navBtn" title="Show Navigation">Show<br>Menu</button>
 <nav>
   <ul>
     <strong><a href="home">Home</a></strong>
+    <%if(!user){ %>
+      <strong><a href="login">Login</a></strong>
+      <%} else { %>
+        <strong><a href="logout">Logout</a></strong>
+      <% } %>
     <a href="blog">Blog</a>
     <a href="checklist">Checklist</a>
     <a href="discussion">Discussion</a>
@@ -14,11 +19,6 @@
     <a href="quizzes">Quizzes</a>
     <a href="fortune_cookie">Fortune</a>
     <a href="resources">Resources</a>
-    <%if(!user){ %>
-    <a id="loginNav" href="login">Login</a>
-    <%} else { %>
-      <a id="loginNav" href="logout">Logout</a>
-    <% } %>
   </ul>
 </nav>
 <script>
@@ -32,7 +32,7 @@
 
     if (navShowContents.style.display === "block") { 
         navShowContents.style.display = "none";
-        btnShowNavigation.innerHTML = "Menu"; 
+        btnShowNavigation.innerHTML = "Show<br>Menu"; 
         headerOne.style.display = "block";
     } else {
         navShowContents.style.display = "block"

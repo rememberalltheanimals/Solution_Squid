@@ -73,29 +73,27 @@ header nav {
   float: none;
   background-color: #441e04;
   width: auto;
-  padding: 0;
+  padding: 5px;
 }
 
 header nav ul {
-  padding: 0;
+  padding: 5px;
+  margin-right: 20px;
   text-align: left;
 }
 
 header nav a {
   display: inline-block;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
-  width: 100px;
+  min-width: 120px;
   text-align: center;
   color: #41040b;
   background-color: #d085b8;
   border: 3px solid #ffd700;
   margin: 1%;
-  padding: 15px;
-}
-
-#loginNav {
-  background-color: #ffd700;
-  border: 3px solid #d085b8;
+  padding: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #navBtn {
@@ -106,10 +104,11 @@ header nav a {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: #d085b8; /* Set a background color */
-  color: #fff; /* Text color */
+  background-color: #ffd700;
+  border: 5px solid #d085b8;
+  color: #3b0028; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 10px; /* Some padding */
+  padding: 5px; /* Some padding */
   border-radius: 5px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
 }
@@ -128,6 +127,7 @@ header h1 {
   color: #ffd700;
   font-size: 30px;
   max-width: 300px;
+  margin-right: 70px;
   /*ONLY WHEN THERE IS A LOGO text-indent: -9999; */
 }
 
