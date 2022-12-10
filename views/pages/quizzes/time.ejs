@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="../../../public/assets/styles.css">
     <!-- Adding Additional Quiz Styles Here -->
     <style>
-
+ 
     </style>
 </head>
 <body>
     <header><%- include('../header.ejs') %></header>
 
-    <h2>Dynamic Planet Practice Quiz</h2>
+    <h2>It's About Time Practice Quiz</h2>
+
+    <h4>This is the for the test portion of this event. There is also a build portion that is not covered by this page. See <a href="checklist">checklist</a> for more information.</h4><br><br>
 
     <div class="quiz" id="quiz"></div>
     <button class= "quizBtn" id="submit">Submit Quiz</button>
@@ -32,83 +34,101 @@
 
         const testQuestions = [ //list of questions
             {
-                question: "1. Freshwater has the salinity of less than _____ ppm?",
-                answers: {
-                    a: "550 ppm",
-                    b: "500 ppm",
-                    c: "1000 ppm"
+                question: "1. On what Gregorian date will Ramadan begin 30 Islamic years later (i.e. 1 Ramadan 1472 AH)?",
+                answers: { 
+                    a: "May 22, 2050", 
+                    b: "May 23, 2050", 
+                    c: "May 21, 2050"
                 },
                 correctAnswer: "a"
             },
             {
-                question: "2. Lake Baikal’s depths were first majorly explored in 1989 by a group of scientists from National Geographic Society & the Soviet Academy of Sciences. The life found at the bottom of the lake most closely resembles what type of ecosystem?",
-                answers: {
-                    a: "Life in the upper ocean",
-                    b: "Life in Volcanoes",
-                    c: "Life in hydrothermal vents (black and white smokers)"
+                question: "2. What day of the week will the answer to the previous question fall?",
+                answers: { 
+                    a: "Friday", 
+                    b: "Saturday", 
+                    c: "Sunday"
                 },
                 correctAnswer: "c"
             },
             {
-                question: "3. What are the general steps of meander formation in streams?",
-                answers: {
-                    a: "Meanders are formed when water erodes sediment in the outer bank of a stream.",
-                    b: "Meanders are formed when wind erodes sediment in the outer bank of a stream.",
-                    c: "Meanders are formed when water AND wind erodes sediment in the outer bank of a stream."
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "4. How common are meanders in streams?",
-                answers: {
-                    a: "They are mildly common especially in the middle & lower course of a bridge",
-                    b: "They are very common especially in the middle & lower course of a bridge",
-                    c: "They are not common especially in the middle & lower course of a bridge"
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "5. What are the most common water pollutants in freshwater rivers worldwide?",
-                answers: {
-                    a: "There is an equal amount of every pollutant.",
-                    b: "Oxygen and Carbon, as it comes from other lifestyles. This leads to air pollution, causing strain in the atmosphere.",
-                    c: "Phosphorus and nitrogen, as it comes from agricultural fertilizers and residential runoff. The nitrogen and phosphorus (especially) can lead to watershed eutrophication, eventually leading to “dead zones”."
-                },
-                correctAnswer: "c"
-            },
-            {
-                question: "6. Ox-bow lakes are formed from…",
-                answers: {
-                    a: "Streams",
-                    b: "Meanders",
-                    c: "Glaciers"
+                question: "3. Cesium is the standard for atomic clocks because it resonates at the same exact frequency every time. What is the electron configuration of Cs (Format Ex. Li: 1s2 2s1)?",
+                answers: { 
+                    a: "[Xe] 6s2", 
+                    b: "[Xe] 6s1", 
+                    c: "[Xe] 4f1 5d1 6s2"
                 },
                 correctAnswer: "b"
             },
             {
-                question: "7. Which drainage pattern is the most common?",
-                answers: {
-                    a: "Dendritic",
-                    b: "Delta",
-                    c: "Flowing"
+                question: "4. What is the energy (in Joules) of the radiation to resonate Cs if the frequency absorbed is 9.19263177 GHz?",
+                answers: { 
+                    a: "E = hv = 6.1 * 10^-25 J", 
+                    b: "E = hv = 6.1 * 10^-24 J", 
+                    c: "E = hv = 6.1 * 10^24 J"
                 },
-                correctAnswer: "a"
+                correctAnswer: "b"
             },
             {
-                question: "8. Which factor influences the quality of drinking water the most?",
-                answers: {
-                    a: "SDT",
-                    b: "TSD",
-                    c: "TDS"
+                question: "5. Which of the following is a leap year? ",
+                answers: { 
+                    a: "1800", 
+                    b: "1962", 
+                    c: "2004"
                 },
                 correctAnswer: "c"
             },
             {
-                question: "9. What is the main difference between a braided stream channel & an anastomose channel?",
-                answers: {
-                    a: "Anastomose channels are basically guided stream channels, and they divide or reconnect as easily as braided stream channels.",
-                    b: "Anastomose channels are basically braided stream channels, but they don’t divide or reconnect as easily as braided stream channels.",
-                    c: "Anastomose channels are basically flowing stream channels, but they don’t divide or reconnect as easily as braided stream channels."
+                question: "6. Which calendar set the months to have the number of days that they currently have in the United States?",
+                answers: { 
+                    a: "Gregorian", 
+                    b: "Julian", 
+                    c: "Hebrew"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "7. When the Gregorian calendar was implemented, how many days were eliminated to reset the calendar?",
+                answers: { 
+                    a: "10", 
+                    b: "15", 
+                    c: "18"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "8. What type of horological device is most likely to have a gnomon?",
+                answers: { 
+                    a: "Sundial", 
+                    b: "Water clock", 
+                    c: "Pendulum Clock"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "9. You are standing by your sundial at a longitude located 5 degrees east of the reference longitude for your time zone. Assuming you haven’t adjusted your sundial for not being on the reference longitude, how will your sundial time differ from a sundial set at the reference longitude?",
+                answers: { 
+                    a: "5 minutes ahead", 
+                    b: "20 minutes ahead", 
+                    c: "20 minutes behind"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "10. Which of the following countries have multiple time zones?",
+                answers: { 
+                    a: "India", 
+                    b: "China", 
+                    c: "Brazil"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "11. What is the largest offset to UTC?",
+                answers: { 
+                    a: "12 hours", 
+                    b: "14 hours", 
+                    c: "24 hours"
                 },
                 correctAnswer: "b"
             }

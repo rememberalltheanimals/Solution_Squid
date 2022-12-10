@@ -14,7 +14,7 @@
 <body>
     <header><%- include('../header.ejs') %></header>
 
-    <h2>Dynamic Planet Practice Quiz</h2>
+    <h2>Environmental Chemistry Practice Quiz</h2>
 
     <div class="quiz" id="quiz"></div>
     <button class= "quizBtn" id="submit">Submit Quiz</button>
@@ -32,83 +32,110 @@
 
         const testQuestions = [ //list of questions
             {
-                question: "1. Freshwater has the salinity of less than _____ ppm?",
-                answers: {
-                    a: "550 ppm",
-                    b: "500 ppm",
-                    c: "1000 ppm"
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "2. Lake Baikal’s depths were first majorly explored in 1989 by a group of scientists from National Geographic Society & the Soviet Academy of Sciences. The life found at the bottom of the lake most closely resembles what type of ecosystem?",
-                answers: {
-                    a: "Life in the upper ocean",
-                    b: "Life in Volcanoes",
-                    c: "Life in hydrothermal vents (black and white smokers)"
+                question: "1. What is the most abundant man made greenhouse gas?",
+                answers: { 
+                    a: "O2", 
+                    b: "H2O Vapor", 
+                    c: "CO2"
                 },
                 correctAnswer: "c"
             },
             {
-                question: "3. What are the general steps of meander formation in streams?",
-                answers: {
-                    a: "Meanders are formed when water erodes sediment in the outer bank of a stream.",
-                    b: "Meanders are formed when wind erodes sediment in the outer bank of a stream.",
-                    c: "Meanders are formed when water AND wind erodes sediment in the outer bank of a stream."
+                question: "2. Conversions and Units: Convert 0.16% by mass to ppm",
+                answers: { 
+                    a: "1600", 
+                    b: "160", 
+                    c: "16"
                 },
                 correctAnswer: "a"
             },
             {
-                question: "4. How common are meanders in streams?",
-                answers: {
-                    a: "They are mildly common especially in the middle & lower course of a bridge",
-                    b: "They are very common especially in the middle & lower course of a bridge",
-                    c: "They are not common especially in the middle & lower course of a bridge"
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "5. What are the most common water pollutants in freshwater rivers worldwide?",
-                answers: {
-                    a: "There is an equal amount of every pollutant.",
-                    b: "Oxygen and Carbon, as it comes from other lifestyles. This leads to air pollution, causing strain in the atmosphere.",
-                    c: "Phosphorus and nitrogen, as it comes from agricultural fertilizers and residential runoff. The nitrogen and phosphorus (especially) can lead to watershed eutrophication, eventually leading to “dead zones”."
-                },
-                correctAnswer: "c"
-            },
-            {
-                question: "6. Ox-bow lakes are formed from…",
-                answers: {
-                    a: "Streams",
-                    b: "Meanders",
-                    c: "Glaciers"
+                question: "3. What is the most abundant greenhouse gas?",
+                answers: { 
+                    a: "O2", 
+                    b: "H2O Vapor", 
+                    c: "CO2"
                 },
                 correctAnswer: "b"
             },
             {
-                question: "7. Which drainage pattern is the most common?",
-                answers: {
-                    a: "Dendritic",
-                    b: "Delta",
-                    c: "Flowing"
+                question: "4. Which gases make up at least 15% of the earth's atmosphere?",
+                answers: { 
+                    a: "Oxygen and Nitrogen", 
+                    b: "Oxygen and Carbon Dioxide", 
+                    c: "Carbon Dioxide and Methane"
                 },
                 correctAnswer: "a"
             },
             {
-                question: "8. Which factor influences the quality of drinking water the most?",
-                answers: {
-                    a: "SDT",
-                    b: "TSD",
-                    c: "TDS"
+                question: "5. Which of the following are techniques NOT capable of softening water?",
+                answers: { 
+                    a: "Backwash", 
+                    b: "Reverse Osmosis", 
+                    c: "Flurination"
                 },
                 correctAnswer: "c"
             },
             {
-                question: "9. What is the main difference between a braided stream channel & an anastomose channel?",
-                answers: {
-                    a: "Anastomose channels are basically guided stream channels, and they divide or reconnect as easily as braided stream channels.",
-                    b: "Anastomose channels are basically braided stream channels, but they don’t divide or reconnect as easily as braided stream channels.",
-                    c: "Anastomose channels are basically flowing stream channels, but they don’t divide or reconnect as easily as braided stream channels."
+                question: "6. NH3",
+                answers: { 
+                    a: "Acidic", 
+                    b: "Basic", 
+                    c: "Neutral"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "7. CO2",
+                answers: { 
+                    a: "Acidic", 
+                    b: "Basic", 
+                    c: "Neutral"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "8. NaClO3",
+                answers: { 
+                    a: "Acidic", 
+                    b: "Basic", 
+                    c: "Neutral"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "9. NO2",
+                answers: { 
+                    a: "Acidic", 
+                    b: "Basic", 
+                    c: "Neutral"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "10. Ozone Layer: What is the chemical formula for Ozone?",
+                answers: { 
+                    a: "O2", 
+                    b: "O3", 
+                    c: "O4"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "11. In what layer of the earth's atmosphere is Ozone most abundant?",
+                answers: { 
+                    a: "Troposphere", 
+                    b: "Thermosphere", 
+                    c: "Stratosphere"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "12. Which type of UV rays does the Ozone filter out?",
+                answers: { 
+                    a: "UV-A", 
+                    b: "UV-B", 
+                    c: "UV-C"
                 },
                 correctAnswer: "b"
             }

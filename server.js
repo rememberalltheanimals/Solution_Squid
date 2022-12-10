@@ -202,6 +202,41 @@ app.get('/remote', function (req, res) {
   };
   res.render('pages/quizzes/remote', args);
 });
+//chemistry-lab.ejs for Chemistry Lab
+app.get('/chemistry-lab', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/chemistry-lab', args);
+});
+//env-chem.ejs for Environmental Chemistry
+app.get('/env-chem', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/env-chem', args);
+});
+//forensics.ejs for Forensics
+app.get('/forensics', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/forensics', args);
+});
+//time.ejs for It's About Time
+app.get('/time', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/time', args);
+});
+//wifi.ejs for Wifi Lab
+app.get('/wifi', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/wifi', args);
+});
 
 //home.ejs
 app.get('/home', function (req, res) {

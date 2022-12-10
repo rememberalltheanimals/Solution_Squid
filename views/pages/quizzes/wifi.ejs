@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="../../../public/assets/styles.css">
     <!-- Adding Additional Quiz Styles Here -->
     <style>
-
+        
     </style>
 </head>
 <body>
     <header><%- include('../header.ejs') %></header>
 
-    <h2>Dynamic Planet Practice Quiz</h2>
+    <h2>WiFi Lab Practice Quiz</h2>
 
     <div class="quiz" id="quiz"></div>
     <button class= "quizBtn" id="submit">Submit Quiz</button>
@@ -32,85 +32,139 @@
 
         const testQuestions = [ //list of questions
             {
-                question: "1. Freshwater has the salinity of less than _____ ppm?",
-                answers: {
-                    a: "550 ppm",
-                    b: "500 ppm",
-                    c: "1000 ppm"
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "2. Lake Baikal’s depths were first majorly explored in 1989 by a group of scientists from National Geographic Society & the Soviet Academy of Sciences. The life found at the bottom of the lake most closely resembles what type of ecosystem?",
-                answers: {
-                    a: "Life in the upper ocean",
-                    b: "Life in Volcanoes",
-                    c: "Life in hydrothermal vents (black and white smokers)"
-                },
-                correctAnswer: "c"
-            },
-            {
-                question: "3. What are the general steps of meander formation in streams?",
-                answers: {
-                    a: "Meanders are formed when water erodes sediment in the outer bank of a stream.",
-                    b: "Meanders are formed when wind erodes sediment in the outer bank of a stream.",
-                    c: "Meanders are formed when water AND wind erodes sediment in the outer bank of a stream."
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "4. How common are meanders in streams?",
-                answers: {
-                    a: "They are mildly common especially in the middle & lower course of a bridge",
-                    b: "They are very common especially in the middle & lower course of a bridge",
-                    c: "They are not common especially in the middle & lower course of a bridge"
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "5. What are the most common water pollutants in freshwater rivers worldwide?",
-                answers: {
-                    a: "There is an equal amount of every pollutant.",
-                    b: "Oxygen and Carbon, as it comes from other lifestyles. This leads to air pollution, causing strain in the atmosphere.",
-                    c: "Phosphorus and nitrogen, as it comes from agricultural fertilizers and residential runoff. The nitrogen and phosphorus (especially) can lead to watershed eutrophication, eventually leading to “dead zones”."
-                },
-                correctAnswer: "c"
-            },
-            {
-                question: "6. Ox-bow lakes are formed from…",
-                answers: {
-                    a: "Streams",
-                    b: "Meanders",
-                    c: "Glaciers"
+                question: "1. What is the wavelength of an 97.7 MHz radio wave in meters?",
+                answers: { 
+                    a: "3.08", 
+                    b: "3.07", 
+                    c: "3.06"
                 },
                 correctAnswer: "b"
             },
             {
-                question: "7. Which drainage pattern is the most common?",
-                answers: {
-                    a: "Dendritic",
-                    b: "Delta",
-                    c: "Flowing"
+                question: "2. In which of the following categories would the radio wave from the previous question be classified?",
+                answers: { 
+                    a: "AM Radio", 
+                    b: "WiFi", 
+                    c: "FM Radio"
+                },
+                correctAnswer: "C"
+            },
+            {
+                question: "3. The band of electromagnetic waves with frequencies between 30 MHz and 300 MHz is called what?",
+                answers: { 
+                    a: "EHF", 
+                    b: "VHF", 
+                    c: "HF"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "4. The band of electromagnetic waves with wavelengths between 10 000 and 100 000 kilometers is called what?",
+                answers: { 
+                    a: "ELF", 
+                    b: "VLF", 
+                    c: "LF"
                 },
                 correctAnswer: "a"
             },
             {
-                question: "8. Which factor influences the quality of drinking water the most?",
-                answers: {
-                    a: "SDT",
-                    b: "TSD",
-                    c: "TDS"
+                question: "5. What is the maximum range in bandwidth (in kHz) allocated to every FM station?",
+                answers: { 
+                    a: "100", 
+                    b: "125", 
+                    c: "150"
                 },
                 correctAnswer: "c"
             },
             {
-                question: "9. What is the main difference between a braided stream channel & an anastomose channel?",
-                answers: {
-                    a: "Anastomose channels are basically guided stream channels, and they divide or reconnect as easily as braided stream channels.",
-                    b: "Anastomose channels are basically braided stream channels, but they don’t divide or reconnect as easily as braided stream channels.",
-                    c: "Anastomose channels are basically flowing stream channels, but they don’t divide or reconnect as easily as braided stream channels."
+                question: "6. What is the maximum range in bandwidth (in kHz) allocated to every AM station?",
+                answers: { 
+                    a: "10", 
+                    b: "15", 
+                    c: "20"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "7. In what year was a patent granted for the BNC connector?",
+                answers: { 
+                    a: "1948", 
+                    b: "1951", 
+                    c: "1954"
                 },
                 correctAnswer: "b"
+            },
+            {
+                question: "8. How is the wavelength of an electromagnetic wave related to its period?",
+                answers: { 
+                    a: "Directly", 
+                    b: "Inversely", 
+                    c: "Variably"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "9. Which of the following types of electromagnetic waves are the most energetic per photon?",
+                answers: { 
+                    a: "Green Visible Light", 
+                    b: "Red Visible Light", 
+                    c: "UV"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "10.  Which of the following types of electromagnetic waves are the most energetic per photon?",
+                answers: { 
+                    a: "HF", 
+                    b: "VHF", 
+                    c: "UHF"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "11. Television channel 37 is not allowed to be used for television broadcasting in the United States, and instead is used for what purpose?",
+                answers: { 
+                    a: "Radio Astronomy", 
+                    b: "Police Comms", 
+                    c: "Fire/EMS Comms"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "12. In the United States, the WWVB broadcasts a time signal in what ITU-designated radio band?",
+                answers: { 
+                    a: "ULF", 
+                    b: "VLF", 
+                    c: "LF"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "13. Which of the following ITU-designated radio bands is used for AM radio transmissions in the United States?",
+                answers: { 
+                    a: "LF", 
+                    b: "MF", 
+                    c: "HF"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "14. Which of the following ITU-designated radio bands is generally used for communication in mines because it can penetrate the Earth?",
+                answers: { 
+                    a: "ULF", 
+                    b: "VLF", 
+                    c: "LF"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "15. High band VHF is another name for which band of radio frequencies used for radio and television broadcasting?",
+                answers: { 
+                    a: "Band I", 
+                    b: "Band II", 
+                    c: "Band III"
+                },
+                correctAnswer: "c"
             }
         ];
 
