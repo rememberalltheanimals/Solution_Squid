@@ -3,92 +3,112 @@
   <head>
     <title>Menomonie High School Science Club</title>
     <meta charset="utf-8">
-    <link href= "" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/assets/styles.css">
-    
+    <link href= "../../public/assets/styles.css" rel="stylesheet">    
     <style>
-    * {box-sizing: border-box}
-    body {font-family: Verdana, sans-serif; margin:0}
-    .images {display: none}
-    img {vertical-align: middle;}
+      * {box-sizing: border-box}
+      .images {display: none}
+      img {vertical-align: middle;}
 
-    .slideshow-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
-    }
+      .slideshow-container {
+        max-width: 300px;
+        position: relative;
+        margin: auto;
+      }
 
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
+      /*Desktop Display*/
+      @media screen and (min-width: 1000px) {
+        /* comes into effect for screens greater than 1000 pixels */
+        .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        }
+      }
 
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
+      /*Tablet Display */
+      @media screen and (min-width: 600px) and (max-width: 999px) {
+        /* comes into effect for screens between 600 and 1000 pixels */
+        .slideshow-container {
+        max-width: 590px;
+        position: relative;
+        margin: auto;
+        }
+      }
+      
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
 
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
 
-    .text {
-      color: #f2f2f2;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-    }
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
 
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
+      .text {
+        color: #fff;
+        background-color: #000;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
 
-    .indicator {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
 
-    .active, .indicator:hover {
-      background-color: #717171;
-    }
+      .indicator {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
 
-    .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
+      .active, .indicator:hover {
+        background-color: #717171;
+      }
 
-    @keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-</style>
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+    </style>
   </head>
 
   <body>
   <header><%- include('header.ejs') %></header>
+    <h1>Welcome!</h1>
+    <h2>The website for the Menomonie High School (MHS) Science Olympiad team</h2>
 
     <div class="slideshow-container">
 
@@ -119,13 +139,6 @@
         <span class="indicator" onclick="currentSlide(3)"></span> 
       </div>
     </div>
-    <footer>
-      <address>
-        <a href="mailto:ehwang1@student.cvtc.edu">Send an email</a>
-      </address>
-
-      <p>copyLeft &#127279; Solution Squid Team 2022</p>
-    </footer>
 
     <script>
       let slideIndex = 1;
@@ -157,4 +170,8 @@
     </script>
 
   </body>
+
+  <footer>
+    <p>This website was created by the Solution Squid team</p>
+  </footer>
 </html>
