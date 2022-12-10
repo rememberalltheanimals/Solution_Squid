@@ -14,7 +14,7 @@
 <body>
     <header><%- include('../header.ejs') %></header>
 
-    <h2>Dynamic Planet Practice Quiz</h2>
+    <h2>Chemistry Lab Practice Quiz</h2>
 
     <div class="quiz" id="quiz"></div>
     <button class= "quizBtn" id="submit">Submit Quiz</button>
@@ -32,85 +32,76 @@
 
         const testQuestions = [ //list of questions
             {
-                question: "1. Freshwater has the salinity of less than _____ ppm?",
-                answers: {
-                    a: "550 ppm",
-                    b: "500 ppm",
-                    c: "1000 ppm"
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "2. Lake Baikal’s depths were first majorly explored in 1989 by a group of scientists from National Geographic Society & the Soviet Academy of Sciences. The life found at the bottom of the lake most closely resembles what type of ecosystem?",
-                answers: {
-                    a: "Life in the upper ocean",
-                    b: "Life in Volcanoes",
-                    c: "Life in hydrothermal vents (black and white smokers)"
-                },
-                correctAnswer: "c"
-            },
-            {
-                question: "3. What are the general steps of meander formation in streams?",
-                answers: {
-                    a: "Meanders are formed when water erodes sediment in the outer bank of a stream.",
-                    b: "Meanders are formed when wind erodes sediment in the outer bank of a stream.",
-                    c: "Meanders are formed when water AND wind erodes sediment in the outer bank of a stream."
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "4. How common are meanders in streams?",
-                answers: {
-                    a: "They are mildly common especially in the middle & lower course of a bridge",
-                    b: "They are very common especially in the middle & lower course of a bridge",
-                    c: "They are not common especially in the middle & lower course of a bridge"
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "5. What are the most common water pollutants in freshwater rivers worldwide?",
-                answers: {
-                    a: "There is an equal amount of every pollutant.",
-                    b: "Oxygen and Carbon, as it comes from other lifestyles. This leads to air pollution, causing strain in the atmosphere.",
-                    c: "Phosphorus and nitrogen, as it comes from agricultural fertilizers and residential runoff. The nitrogen and phosphorus (especially) can lead to watershed eutrophication, eventually leading to “dead zones”."
-                },
-                correctAnswer: "c"
-            },
-            {
-                question: "6. Ox-bow lakes are formed from…",
-                answers: {
-                    a: "Streams",
-                    b: "Meanders",
-                    c: "Glaciers"
+                question: "1. You are tasked with creating a buffer with a pH of 9.5. Which of the following acid-base pairs is most suitable for this buffer?",
+                answers: { 
+                    a: "CH3COOH/CH3COO-", 
+                    b: "CHN/CN-", 
+                    c: "H3PO4/H2PO4-"
                 },
                 correctAnswer: "b"
             },
             {
-                question: "7. Which drainage pattern is the most common?",
-                answers: {
-                    a: "Dendritic",
-                    b: "Delta",
-                    c: "Flowing"
+                question: "2. You are tasked with creating a buffer with a pH of 9.5. First, you must prepare 1.00L of a 0.500M solution of the conjugate acid. How many grams of acid are required?",
+                answers: { 
+                    a: "13.3 g HCN", 
+                    b: "13.6 g HCN", 
+                    c: "13.0 g HCN"
                 },
-                correctAnswer: "a"
+                correctAnswer: "b"
             },
             {
-                question: "8. Which factor influences the quality of drinking water the most?",
-                answers: {
-                    a: "SDT",
-                    b: "TSD",
-                    c: "TDS"
+                question: "3. You are tasked with creating a buffer with a pH of 9.5. How many mols of NaOH should be added to the resultant solution to attain a pH of 9.5?",
+                answers: { 
+                    a: "1.00 mol", 
+                    b: "0.30 mol", 
+                    c: "0.33 mol"
                 },
                 correctAnswer: "c"
             },
             {
-                question: "9. What is the main difference between a braided stream channel & an anastomose channel?",
-                answers: {
-                    a: "Anastomose channels are basically guided stream channels, and they divide or reconnect as easily as braided stream channels.",
-                    b: "Anastomose channels are basically braided stream channels, but they don’t divide or reconnect as easily as braided stream channels.",
-                    c: "Anastomose channels are basically flowing stream channels, but they don’t divide or reconnect as easily as braided stream channels."
+                question: "4. You are tasked with creating a buffer with a pH of 9.5. How many grams of NaOH is the answer to the previous problem equivalent to?",
+                answers: { 
+                    a: "13.00 g", 
+                    b: "13.33 g", 
+                    c: "13.30 g"
                 },
                 correctAnswer: "b"
+            },
+            {
+                question: "5. A 2.561 g sample of an unknown compound contains C, H, and O and a density of 1.453 g/mL. The compound is analyzed using combustion analysis and is determined to contain 3.753 g CO2 and 1.537 g H2O. The molar mass of the compound is 90.08 g/mol. Determine the mass of C in the compound.",
+                answers: { 
+                    a: "1.024 g C", 
+                    b: "1.000 g C", 
+                    c: "1.048 g C"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "6. A 2.561 g sample of an unknown compound contains C, H, and O and a density of 1.453 g/mL. The compound is analyzed using combustion analysis and is determined to contain 3.753 g CO2 and 1.537 g H2O. The molar mass of the compound is 90.08 g/mol. Determine the mass of H in the compound.",
+                answers: { 
+                    a: "0.171 g H", 
+                    b: "1.172 g H", 
+                    c: "0.172 g H"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "7. A 2.561 g sample of an unknown compound contains C, H, and O and a density of 1.453 g/mL. The compound is analyzed using combustion analysis and is determined to contain 3.753 g CO2 and 1.537 g H2O. The molar mass of the compound is 90.08 g/mol.  Determine the molecular formula of the compound",
+                answers: { 
+                    a: "C3H6O3", 
+                    b: "C4C8O4", 
+                    c: "C3H6O6"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "8. A solution is made from mixing 163 g of glycerin, C3H8O3, and 336 mL of water at 39.8 oC. Given the density of water is 0.9923 g/mL and vapor pressure of pure water at 39.8 oC is 54.74 mmHg, determine the vapor pressure, in mmHg, of the solution.",
+                answers: { 
+                    a: "49.9 mmHg", 
+                    b: "50.0 mmHg", 
+                    c: "49.8 mmHg"
+                },
+                correctAnswer: "a"
             }
         ];
 

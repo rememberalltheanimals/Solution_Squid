@@ -8,14 +8,6 @@
     <link rel="stylesheet" href="../../../public/assets/styles.css">
     <!-- Adding Additional Quiz Styles Here -->
     <style>
-        .quiz {
-            border: 5px outset #F79DA8;
-            background-color: #3B0028;
-            color: #ffffff;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-        }
-
     </style>
 </head>
 <body>
@@ -38,114 +30,39 @@
         const submitButton = document.getElementById('submit');
 
         const testQuestions = [ //list of questions
-            {
-                question: "1. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
+        {
+                question: "1. What percentage of the mass-energy of the universe is made up of dark energy?",
+                answers: { 
+                    a: "0.68", 
+                    b: "0.7", 
+                    c: "0.22"
                 },
-                correctAnswer: "letter"
-            },
+                correctAnswer: "a"},
             {
-                question: "2. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
+                question: "2. Quantom Field Theory predicts the value of the cosmological constant to be _____ orders of magnitude larger than we observe.",
+                answers: { 
+                    a: "AnswerA", 
+                    b: "Over 100", 
+                    c: "AnswerC"
                 },
-                correctAnswer: "letter"
-            },
+                correctAnswer: "b"},
             {
-                question: "3. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
+                question: "3. How are galaxies organized and distributed within the universe?",
+                answers: { 
+                    a: "AnswerA", 
+                    b: "AnswerB", 
+                    c: "Organized into clusters, distributed across the universe."
                 },
-                correctAnswer: "letter"
-            },
+                correctAnswer: "c"},
             {
-                question: "4. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
+                question: "4. What would an outside observer see as an object approaches and crosses the event horizon of a black hole?",
+                answers: { 
+                    a: "AnswerA", 
+                    b: "The object would appear to move slower and slower as it approaches the event horizon, eventually appearing to freeze right before it comes.", 
+                    c: "AnswerC"
                 },
-                correctAnswer: "letter"
-            },
-            {
-                question: "5. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
-                },
-                correctAnswer: "letter"
-            },
-            {
-                question: "6. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
-                },
-                correctAnswer: "letter"
-            },
-            {
-                question: "7. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
-                },
-                correctAnswer: "letter"
-            },
-            {
-                question: "8. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
-                },
-                correctAnswer: "letter"
-            },
-            {
-                question: "9. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
-                },
-                correctAnswer: "letter"
-            },
-            {
-                question: "10. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
-                },
-                correctAnswer: "letter"
-            },
-            {
-                question: "11. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
-                },
-                correctAnswer: "letter"
-            },
-            {
-                question: "12. question",
-                answers: {
-                    a: "choice",
-                    b: "choice",
-                    c: "choice"
-                },
-                correctAnswer: "c"
-            }
+                correctAnswer: "b"},
+
             ];
 
         function buildQuiz(){ //function to build a quiz
