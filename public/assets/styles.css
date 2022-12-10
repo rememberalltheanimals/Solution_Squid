@@ -103,11 +103,6 @@ main a:visited {
   color: #d085b8;
 }
 
-img {
-  max-width: 50%;
-  height: auto;
-}
-
 h2 {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   font-size: 30px;
