@@ -155,13 +155,14 @@
                     //and for each available answer...
                     for(letter in currentQuestion.answers){
 
-                    //...add an HTML radio button
-                    answers.push(
-                        `<label>
-                        <input type="radio" name="question${questionNumber}" value="${letter}">
-                        ${currentQuestion.answers[letter]}
-                        </label><br>`
-                    );
+                        //...add an HTML radio button
+                        answers.push(
+                            `<label style="display:flex;margin:5px;border:1px solid #ffd700;">
+                            <input type="radio" name="question${questionNumber}" value="${letter}">
+                            ${currentQuestion.answers[letter]}
+                            </label>`
+                        );
+                        
                     }
 
                     //add this question and its answers to the output
