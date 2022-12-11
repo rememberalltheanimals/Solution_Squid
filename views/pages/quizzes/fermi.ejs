@@ -13,7 +13,7 @@
 <body>
     <header><%- include('../header.ejs') %></header>
 
-    <h2>TEMPLATE Practice Quiz</h2>
+    <h2>Fermi Questions Practice Quiz</h2>
 
     <div class="quiz" id="quiz"></div>
     <button class= "quizBtn" id="submit">Submit Quiz</button>
@@ -30,39 +30,60 @@
         const submitButton = document.getElementById('submit');
 
         const testQuestions = [ //list of questions
-        {
-                question: "1. What percentage of the mass-energy of the universe is made up of dark energy?",
-                answers: { 
-                    a: "0.68", 
-                    b: "0.7", 
-                    c: "0.22"
-                },
-                correctAnswer: "a"},
             {
-                question: "2. Quantom Field Theory predicts the value of the cosmological constant to be _____ orders of magnitude larger than we observe.",
+                question: "1. How many seconds are there in a year? ",
                 answers: { 
-                    a: "AnswerA", 
-                    b: "Over 100", 
-                    c: "AnswerC"
+                    a: "3.15 x 10^7 s/y", 
+                    b: "3.15 x 10^7 sec", 
+                    c: "3.15 x 10^8 x/y"
                 },
-                correctAnswer: "b"},
+                correctAnswer: "a"
+            },
             {
-                question: "3. How are galaxies organized and distributed within the universe?",
+                question: "2. How many miles are there in a light-year? ",
                 answers: { 
-                    a: "AnswerA", 
-                    b: "AnswerB", 
-                    c: "Organized into clusters, distributed across the universe."
+                    a: "5.9 x 10^13 m/y", 
+                    b: "5.9 x 10^12 miles", 
+                    c: "5.9 x 10^12 m/y"
                 },
-                correctAnswer: "c"},
+                correctAnswer: "c"
+            },
             {
-                question: "4. What would an outside observer see as an object approaches and crosses the event horizon of a black hole?",
+                question: "3. How many kilometers are there in a light-year?",
                 answers: { 
-                    a: "AnswerA", 
-                    b: "The object would appear to move slower and slower as it approaches the event horizon, eventually appearing to freeze right before it comes.", 
-                    c: "AnswerC"
+                    a: "10^11", 
+                    b: "10^12", 
+                    c: "10^13"
                 },
-                correctAnswer: "b"},
-
+                correctAnswer: "c"
+            },
+            {
+                question: "4. For the average American woman, how many times will her heart beat during her lifetime?",
+                answers: { 
+                    a: "24 x 10^9", 
+                    b: "2.4 x 10^9", 
+                    c: "2.4 x 10^10"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "5. How many heartbeats are there in a year for the entire world's population? ",
+                answers: { 
+                    a: "1.8 x 10^17", 
+                    b: "2.0 x 10^17", 
+                    c: "1.8 x 10^18"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "6. What is the density of butter in g/cc? ",
+                answers: { 
+                    a: "1.5 g/cm^3", 
+                    b: "2 g/cm^3", 
+                    c: "1.5"
+                },
+                correctAnswer: "a"
+            }
         ];
 
         function buildQuiz(){ //function to build a quiz
