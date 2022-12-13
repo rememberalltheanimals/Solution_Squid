@@ -238,6 +238,27 @@ app.get('/wifi', function (req, res) {
   };
   res.render('pages/quizzes/wifi', args);
 });
+//fermi.ejs for Fermi Questions
+app.get('/fermi', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/fermi', args);
+});
+//horticulture.ejs for Horticulture
+app.get('/horticulture', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/horticulture', args);
+});
+//medicine.ejs for Precision Medicine
+app.get('/medicine', function (req, res) {
+  args = {
+    user: checkUser(req),
+  };
+  res.render('pages/quizzes/medicine', args);
+});
 
 //home.ejs
 app.get('/home', function (req, res) {

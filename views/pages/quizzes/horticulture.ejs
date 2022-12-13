@@ -13,7 +13,7 @@
 <body>
     <header><%- include('../header.ejs') %></header>
 
-    <h2>TEMPLATE Practice Quiz</h2>
+    <h2>Horticulture Practice Quiz</h2>
 
     <div class="quiz" id="quiz"></div>
     <button class= "quizBtn" id="submit">Submit Quiz</button>
@@ -30,39 +30,69 @@
         const submitButton = document.getElementById('submit');
 
         const testQuestions = [ //list of questions
-        {
-                question: "1. What percentage of the mass-energy of the universe is made up of dark energy?",
-                answers: { 
-                    a: "0.68", 
-                    b: "0.7", 
-                    c: "0.22"
-                },
-                correctAnswer: "a"},
             {
-                question: "2. Quantom Field Theory predicts the value of the cosmological constant to be _____ orders of magnitude larger than we observe.",
+                question: "1. The three major plant cell parts are",
                 answers: { 
-                    a: "AnswerA", 
-                    b: "Over 100", 
-                    c: "AnswerC"
+                    a: "cell wall, chloroplast, goigi", 
+                    b: "cell wall, goigi, nucleus", 
+                    c: ". cell wall, cytoplasm, nucleus"
                 },
-                correctAnswer: "b"},
+                correctAnswer: "c"
+            },
             {
-                question: "3. How are galaxies organized and distributed within the universe?",
+                question: "2. What are the major vegetative parts of the plant?",
                 answers: { 
-                    a: "AnswerA", 
-                    b: "AnswerB", 
-                    c: "Organized into clusters, distributed across the universe."
+                    a: "leaf, flower, seed", 
+                    b: " leaf, root, stem", 
+                    c: "root, seed, bud"
                 },
-                correctAnswer: "c"},
+                correctAnswer: "b"
+            },
             {
-                question: "4. What would an outside observer see as an object approaches and crosses the event horizon of a black hole?",
+                question: "3. What are the major reproductive parts of the plant?",
                 answers: { 
-                    a: "AnswerA", 
-                    b: "The object would appear to move slower and slower as it approaches the event horizon, eventually appearing to freeze right before it comes.", 
-                    c: "AnswerC"
+                    a: "leaf, flower, seed", 
+                    b: "flower, fruit, seed", 
+                    c: " leaf, fruit, stem"
                 },
-                correctAnswer: "b"},
-
+                correctAnswer: "b"
+            },
+            {
+                question: "4. What are the four essential plant parts?",
+                answers: { 
+                    a: "leaf, flower, stem, root", 
+                    b: "flower, seed, petal, root", 
+                    c: "leaf, root, seed, flower"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "5. The four main parts of the flower",
+                answers: { 
+                    a: "petal, pistil, stamen, sepal", 
+                    b: "stamen, style, ovary, pistil", 
+                    c: "anther, petal, stamen, receptacle"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "6. A monocotyledon is defined as",
+                answers: { 
+                    a: "embryo with no cotyledon", 
+                    b: "embryo with single cotyledon", 
+                    c: "embryo with three cotyledons"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "7. Cotyledons are defined as",
+                answers: { 
+                    a: "seedlings", 
+                    b: "embryo", 
+                    c: "embryo"
+                },
+                correctAnswer: "c"
+            }
         ];
 
         function buildQuiz(){ //function to build a quiz
