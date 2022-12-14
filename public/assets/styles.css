@@ -54,6 +54,7 @@
 }
 
 body {
+  padding: 15px;
   position: relative;
   background-color: #4a0009;
   color: #fff;
