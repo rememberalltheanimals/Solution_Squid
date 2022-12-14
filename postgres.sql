@@ -10,6 +10,7 @@ CREATE TABLE feedback (
   advice varchar(100)
 );
 
+
 CREATE TABLE users(
 id SERIAL PRIMARY KEY,
 userEmails TEXT NOT NULL,
