@@ -152,6 +152,23 @@ p {
   line-height: 20px;
 }
 
+label {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+table {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
 p a {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   color: #fff;
