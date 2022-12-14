@@ -54,7 +54,8 @@
 }
 
 body {
-  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
   background-color: #4a0009;
   color: #fff;
