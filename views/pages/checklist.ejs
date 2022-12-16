@@ -13,6 +13,12 @@
       font-size: 20px;
       color: rgb(152, 141, 0);
     }
+    #eventName {
+      cursor: pointer;
+      display: inline;
+      margin: 1px;
+      text-decoration:underline;
+    }
   </style>
 </head>
 <body onload="myFunction('Time')">
@@ -25,15 +31,22 @@
     This page provides construction parameters and rules.
   </p>
 
-  <ul class="options">
-    <li style="display:inline" onclick="myFunction('Time')">It's About Time | </li>
-    <li style="display:inline" onclick="myFunction('Trajectory')">Trajectory | </li>
-    <li style="display:inline" onclick="myFunction('WiFi')">WiFi Lab | </li>
-    <li style="display:inline" onclick="myFunction('Bridge')">Bridge | </li>
-    <li style="display:inline" onclick="myFunction('Detector')">Detector Building | </li>
-    <li style="display:inline" onclick="myFunction('Flight')">Flight | </li>
-    <li style="display:inline" onclick="myFunction('Scrambler')">Scrambler | </li>
-    <li style="display:inline" onclick="myFunction('Robo')">Robo-Cross</li>
+  <ul class="options" style="color: #fff;font-family: Tahoma, Verdana, Segoe, sans-serif;">
+    <li onclick="myFunction('Time')" id="eventName">It's About Time</li>
+    <li style="display:inline;margin:1px;"> | </li>
+    <li onclick="myFunction('Trajectory')" id="eventName">Trajectory</li>
+    <li style="display:inline;margin:1px;"> | </li>
+    <li onclick="myFunction('WiFi')" id="eventName">WiFi Lab</li>
+    <li style="display:inline;margin:1px;"> | </li>
+    <li onclick="myFunction('Bridge')" id="eventName">Bridge</li>
+    <li style="display:inline;margin:1px;"> | </li>
+    <li onclick="myFunction('Detector')" id="eventName">Detector Building</li>
+    <li style="display:inline;margin:1px;"> | </li>
+    <li onclick="myFunction('Flight')" id="eventName">Flight</li>
+    <li style="display:inline;margin:1px;"> | </li>
+    <li onclick="myFunction('Scrambler')" id="eventName">Scrambler</li>
+    <li style="display:inline;margin:1px;"> | </li>
+    <li onclick="myFunction('Robo')" id="eventName">Robo-Cross</li>
   </ul>
 
   <div id="Time" class="divs">
