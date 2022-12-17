@@ -113,6 +113,15 @@ h2 {
   font-weight: 700;
   line-height: 30px;
 }
+h2 a {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
 
 h3 {
   color: #f79ea8;
