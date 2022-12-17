@@ -133,6 +133,7 @@ app.get('/discussion', async (req, res) => {
     };
 
     res.render('pages/discussion', args);
+    client.release();
   } catch (err) {
     console.error(err);
     res.set({
@@ -425,6 +426,7 @@ app
       };
 
       res.render('pages/feedback', args);
+      client.release();
     } catch (err) {
       console.error(err);
       res.set({

@@ -20,9 +20,7 @@
     <% }); %>
     <p id="output"></p>
     </div>
-  <script src="/socket.io/socket.io.js"></script>
   <script>
-    const socket = io();
     const testButton = document.getElementById('11');
     const output = document.getElementById('output');
     const send = async function (buttonId) {
@@ -46,18 +44,6 @@
     location.reload();
   }
 };
-
-//Event listeners for web sockets.
-testButton.addEventListener('click', function (e) {
-  e.preventDefault();
-  socket.emit('Socket established');
-});
-
-//"socket.on" functions.
-socket.on('Socket established', function () {
-  const button = document.getElementById('11');
-  button.innerHTML = 'success';
-});
 
   </script>
 </body>
