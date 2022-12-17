@@ -13,16 +13,23 @@
       font-size: 20px;
       color: rgb(152, 141, 0);
     }
-    #eventName {
+    .eventName {
       display: inline-block;
       width: auto;
       text-align: center;
-      background-color: #3b0028;
-      border: 3px solid #d085b8; 
-      margin: 1%;
-      padding: 5px;
-      cursor: pointer;
-      text-decoration:underline;
+      display: inline-block;
+      text-decoration: none;
+      border-color: #d085b8;
+      width: 130px;
+      color: #ffd700;
+      font-size: large;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-style: ridge;
+      border-width: 1px;
+    }
+    .eventName:hover {
+       border-color: #ffd700;
     }
   </style>
 </head>
@@ -37,14 +44,14 @@
   </p>
 
   <ul class="options" style="color:#fff;font-family:Tahoma,Verdana,Segoe, sans-serif;padding:0;text-align:center;">
-    <li onclick="myFunction('Time')" id="eventName">It's About Time</li>
-    <li onclick="myFunction('Trajectory')" id="eventName">Trajectory</li>
-    <li onclick="myFunction('WiFi')" id="eventName">WiFi Lab</li>
-    <li onclick="myFunction('Bridge')" id="eventName">Bridge</li>
-    <li onclick="myFunction('Detector')" id="eventName">Detector Building</li>
-    <li onclick="myFunction('Flight')" id="eventName">Flight</li>
-    <li onclick="myFunction('Scrambler')" id="eventName">Scrambler</li>
-    <li onclick="myFunction('Robo')" id="eventName">Robo-Cross</li>
+    <li onclick="myFunction('Time')" class="eventName">It's About Time</li>
+    <li onclick="myFunction('Trajectory')" class="eventName">Trajectory</li>
+    <li onclick="myFunction('WiFi')" class="eventName">WiFi Lab</li>
+    <li onclick="myFunction('Bridge')" class="eventName">Bridge</li>
+    <li onclick="myFunction('Detector')" class="eventName">Detector</li>
+    <li onclick="myFunction('Flight')" class="eventName">Flight</li>
+    <li onclick="myFunction('Scrambler')" class="eventName">Scrambler</li>
+    <li onclick="myFunction('Robo')" class="eventName">Robo-Cross</li>
   </ul>
 
   <div id="Time" class="divs">
